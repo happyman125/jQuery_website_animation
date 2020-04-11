@@ -1,0 +1,331 @@
+// Кнопки
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  background: none;
+  outline: 0 none;
+  border: 0 none;
+  border-radius: 0;
+  padding: 25px 33px;
+  background-color: $info-section-title-color;
+  font-size: 23px;
+  font-family: $bold-font;
+  font-weight: 400;
+  border: 2px solid transparent;
+  transition: 0.5s;
+
+  @include max-w($screen-xxl) {
+    padding: 18px;
+    font-size: 18px;
+  }
+
+  @include max-w($screen-xl) {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  @include max-w($screen-sm) {
+    margin-bottom: 10px;
+  }
+
+  &:hover {
+    background-color: transparent;
+    border-color: $main-color;
+    color: $main-color;
+  }
+
+  &--section-orange {
+    background-color: $find-section-color;
+
+    &:hover {
+      background-color: transparent;
+      color: $find-section-color;
+      border-color: $find-section-color;
+    }
+  }
+
+
+
+  &--section-green {
+    background-color: $info-section-title-color;
+
+    &:hover {
+      background-color: transparent;
+      color: $info-section-title-color;
+      border-color: $info-section-title-color;
+    }
+  }
+
+  &--section-grey {
+    background-color: $info-small-text-color;
+
+    &:hover {
+      background-color: transparent;
+      color: $info-small-text-color;
+      border-color: $info-small-text-color;
+    }
+  }
+
+  &--section-lightgreen {
+    background-color: $ecology-section-color;
+
+    &:hover {
+      background-color: transparent;
+      color: $ecology-section-color;
+      border-color: $ecology-section-color;
+    }
+  }
+
+  &--section-info {
+    /*transform: translateX(-25px);
+
+    @include max-w($screen-sm) {
+      transform: translateX(50px);
+    }*/
+
+    background-position: bottom left;
+    &:hover {
+      background-color: $main-color;
+      color: $info-section-title-color;
+      border-color: $info-section-title-color;
+    }
+  }
+
+  &--find-section {
+    background-color: $find-section-color;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @include max-w($screen-sm){
+      transform: translateX(50px);
+    }
+
+    @include max-w($screen-xs) {
+      transform: translateX(25px);
+    }
+
+    &:hover {
+      background-color: $main-color;
+      border-color: $find-section-color;
+      color: $find-section-color;
+    }
+  }
+
+  &--slider-section {
+    background-color: $slider-section-btn;
+    display: block;
+    width: 277px;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+
+    @include max-w($screen-xxl) {
+      width: 240px;
+    }
+
+    &:hover {
+      background-color: $main-color;
+      border-color: $slider-section-btn;
+      color: $slider-section-btn;
+    }
+
+    &:first-of-type {
+      margin-bottom: 20px;
+    }
+
+    &:last-of-type {
+      width: 260px;
+      transform: translateX(50px);
+
+      @include max-w($screen-xxl) {
+        width: 230px;
+      }
+
+    }
+  }
+
+  &--ecology-section {
+    &:hover{
+      background-color: rgba(119, 144, 39, 0);
+    }
+  }
+
+  &--market-section {
+    background-color: $market-decor-color;
+
+    &:hover {
+      background-color: rgba(162, 116, 43, 0);
+    }
+  }
+
+  &--section-intro {
+    background-color: #a1ac96;
+    padding: 23px 27px;
+
+    @include max-w($screen-sm){
+      margin-bottom: 20px;
+    }
+  }
+
+  &--eat-section {
+    display: block;
+
+    &:first-of-type {
+      width: 227px;
+      margin-top: 30px;
+    }
+
+    &:last-of-type {
+      width: 156px;
+      margin-top: 20px;
+      transform: translateX(28px);
+    }
+  }
+
+  &--section-live {
+    background-color: #737d69;
+
+    &:hover {
+      background-color: $main-color;
+      color: #737d69;
+      border-color: #737d69;
+    }
+  }
+
+  &--other{
+    padding-top: 14px;
+    padding-bottom: 14px;
+    background-color: #a2742b;
+
+    &:hover {
+      background-color: $main-color;
+      color: #a2742b;
+      border-color: #a2742b;
+    }
+  }
+
+  &--present{
+    background-color: #484d43;
+
+    &:hover{
+      background-color: #a1ac96;
+    }
+  }
+
+  &--toolbox{
+    background-color: #484d43;
+    font-size: 16px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-top: 30px;
+
+    &:hover{
+      background-color: #a1ac96;
+    }
+
+  }
+
+  &--toolbox-sm-indent{
+    margin-top: 10px;
+  }
+
+  &--block{
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    width: 144px;
+    margin: 10px auto;
+  }
+
+  &.btn--whit-bg{
+    &:hover{
+      border-color: #4a591a;
+      color: #4a591a;
+      background-color: #fff;
+    }
+  }
+
+
+  &--popup{
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    &:hover {
+      color:#4a591a ;
+      border: 2px solid #4a591a;
+      background-color: #fff;
+    }
+  }
+
+  &--menu{
+    width: 54px;
+    height: 54px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    display: inline-block;
+    color: white;
+    background-color: #5e6656;
+    position: absolute;
+    right: 0;
+    top: 8px;
+    font-size: 16px;
+    padding-left: 0;
+    padding-right: 0;
+
+    @include max-w($screen-xxl){
+      padding-top: 13px;
+      padding-bottom: 13px;
+    }
+
+    >svg{
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+
+    }
+
+    &:hover{
+      background-color: white;
+      color: #5e6656;
+      border-color: #5e6656;
+
+      >svg{
+
+        polygon{
+          fill:#5e6656;
+        }
+      }
+    }
+  }
+
+  &--menu-ind{
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  &--banner-content{
+    background-color: #a1ac96;
+    padding: 23px 27px;
+
+    &:hover{
+      //background-color: rgba(72, 77, 67, 0.8);
+      //background-color: #758E35;
+      color: #a1ac96;
+      background-color: white;
+    }
+  }
+}
+
+.btn-scroll-down {
+  display: inline-block;
+  margin-top: 61px;
+  opacity: 0;
+}
+
+.btn-group {
+  text-align: center;
+}

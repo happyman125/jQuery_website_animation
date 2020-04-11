@@ -1,0 +1,189 @@
+$base-font-size: 16px;
+
+$maxwidth: 1920px;
+
+$btn-border-radius: 25px;
+
+$breakpoints: (
+  phone-small: 375px,
+  phone: 480px,
+  tablet: 768px,
+  tablet-wide: 1024px,
+  desktop: 1440px,
+  desktop-large: 1680px,
+  desktop-wide: $maxwidth
+);
+
+$colors: (
+white: #fff,
+  black: #000,
+  blue: #2e8398,
+  dark-blue: #779027,
+  green: #519d45,
+  dark-green: #264d20,
+  menu-blue: #24697b
+);
+
+$padding-sizing: (
+  griditem: (
+    phone: (
+      padding-left: 20px,
+      padding-right: 20px
+    ),
+    tablet: (
+      padding-left: 30px,
+      padding-right: 30px
+    ),
+    tablet-wide: (
+      padding-left: 40px,
+      padding-right: 40px
+    ),
+    desktop: (
+      padding-left: 20px,
+      padding-right: 20px
+    )
+  ),
+  columns: (
+    phone: (
+      padding-left: 10px,
+      padding-right: 10px
+    ),
+    tablet: (
+      padding-left: 10px,
+      padding-right: 10px
+    ),
+    tablet-wide: (
+      padding-left: 10px,
+      padding-right: 10px
+    ),
+    desktop: (
+      padding-left: 0px,
+      padding-right: 0px
+    )
+  )
+);
+
+$text-sizing: (
+  menu: (
+    tablet: (
+      font-size: (15rem / 16),
+      line-height: 1
+    ),
+    tablet-wide: (
+      font-size: (15rem / 16),
+      line-height: 1
+    ),
+    desktop: (
+      font-size: (15rem / 16),
+      line-height: 1
+    )
+  ),
+  bodytext: (
+    phone: (
+      font-size: (14rem / 16),
+      line-height: (16rem / 16)
+    ),
+    tablet: (
+      font-size: (14rem / 16),
+      line-height: (16rem / 16)
+    ),
+    tablet-wide: (
+      font-size: (16rem / 16),
+      line-height: (18rem / 16)
+    ),
+    desktop: (
+      font-size: (16rem / 16),
+      line-height: (18rem / 16)
+    )
+  ),
+  headline: (
+    phone: (
+      font-size: (25rem / 16),
+      line-height: (25rem / 16)
+    ),
+    tablet: (
+      font-size: (30rem / 16),
+      line-height: (30rem / 16)
+    ),
+    tablet-wide: (
+      font-size: (34rem / 16),
+      line-height: (34rem / 16)
+    ),
+    desktop: (
+      font-size: (38rem / 16),
+      line-height: (38rem / 16)
+    )
+  ),
+  subheadline: (
+    phone: (
+      font-size: (18rem / 16),
+      line-height: (20rem / 16)
+    ),
+    tablet: (
+      font-size: (18rem / 16),
+      line-height: (20rem / 16)
+    ),
+    tablet-wide: (
+      font-size: (18rem / 16),
+      line-height: (20rem / 16)
+    ),
+    desktop: (
+      font-size: (20rem / 16),
+      line-height: (24rem / 16)
+    )
+  ),
+  cases: (
+    phone: (
+      font-size: (15rem / 16),
+      line-height: (18rem / 16)
+    ),
+    tablet: (
+      font-size: (15rem / 16),
+      line-height: (18rem / 16)
+    ),
+    tablet-wide: (
+      font-size: (15rem / 16),
+      line-height: (18rem / 16)
+    ),
+    desktop: (
+      font-size: (15rem / 16),
+      line-height: (18rem / 16)
+    )
+  ),
+  subnav: (
+    phone: (
+      font-size: (20rem / 16),
+      line-height: (25rem / 16)
+    ),
+    tablet: (
+      font-size: (20rem / 16),
+      line-height: (25rem / 16)
+    ),
+    tablet-wide: (
+      font-size: (20rem / 16),
+      line-height: (25rem / 16)
+    ),
+    desktop: (
+      font-size: (20rem / 16),
+      line-height: (25rem / 16)
+    )
+  ),
+  table: (
+    phone: (
+      font-size: (11rem / 16),
+      line-height: (13rem / 16)
+    ),
+    tablet: (
+      font-size: (13rem / 16),
+      line-height: (15rem / 16)
+    ),
+    tablet-wide: (
+      font-size: (13rem / 16),
+      line-height: (15rem / 16)
+    ),
+    desktop: (
+      font-size: (16rem / 16),
+      line-height: (16rem / 16)
+    )
+  )
+);

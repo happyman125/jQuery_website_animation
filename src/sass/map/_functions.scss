@@ -1,0 +1,71 @@
+@import "settings";
+
+@function spacing($size: 'base') {
+  @return map-get($spacings, $size);
+}
+
+@function _breakpoint($name) {
+  @if not map-has-key($breakpoints, $name) {
+    @warn "Couldn't find a breakpoint named `#{$name}`.";
+    @return false;
+  }
+
+  @return map-get($breakpoints, $name);
+}
+
+@function _breakpoints-for($map, $size) {
+  @return map-get($map, $size);
+}
+
+@function _properties-for($map, $size, $name) {
+  $breakpoints-map: _breakpoints-for($map, $size);
+  @return map-get($breakpoints-map, $name);
+}
+
+@function em($px-value, $base: $base-font-size) {
+  @return #{$px-value / $base}em;
+}
+
+@function getcolor($name: 'white') {
+  @return map-get($colors, $name);
+}
+
+@function _buildIcon($icon, $width, $height) {
+  $icon: '%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%22#{$width}%22%20height%3D%22#{$height}%22%3E#{$icon}%3C%2Fsvg%3E';
+  @return $icon;
+}
+
+@function _buildPath($path, $parameters) {
+  $icon: '%3Cpath%20fill%3D%22#{map-get($parameters, color)}%22%20stroke%3D%22#{map-get($parameters, stroke-color)}%22%20stroke-width%3D%22#{map-get($parameters, stroke-width)}%22%20style%3D%22#{map-get($parameters, css)}%22%20d%3D%22#{$path}%22%20%2F%3E';
+  @return $icon;
+}
+
+@function icon(
+  $icon-name,
+  $color,
+  $width,
+  $height,
+  $stroke-color: transparent,
+  $stroke-width: 0,
+  $css: '' // arbitrary css
+  ){
+    $parameters: (
+      'color': $color,
+      'stroke-color': $stroke-color,
+      'stroke-width': $stroke-width,
+      'css': $css
+    );
+
+    $icons: (
+      checkmark: _buildPath('M17.44 51.79a6.45 6.45 0 0 0 9.12 0L53.71 15a6.45 6.45 0 1 0-9.12-9.12L22 38.1l-9.88-11.5A6.45 6.45 0 1 0 3 35.73z', $parameters),
+    );
+
+
+    $icon: _buildIcon(map-get($icons, $icon-name), $width, $height);
+    @return url("data:image/svg+xml;charset=utf8,#{$icon}");
+  }
+
+@function get-vw($target) {
+  $vw-context: (1440 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}

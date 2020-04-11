@@ -1,0 +1,281 @@
+.menu-wrp {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $main-color;
+  z-index: 900;
+  transform: translateX(100%);
+  transition: 0.8s;
+  overflow: auto;
+
+  @include max-w($screen-md){
+    flex-wrap: wrap;
+  }
+}
+
+.left-part {
+  width: 65%;
+  background-color: #d0d5ca;
+  transform: translateX(-300%);
+  transition: 0.8s;
+
+  @include max-w($screen-xl){
+    width: 60%;
+  }
+
+  @include max-w($screen-lg){
+    padding-bottom: 20px;
+  }
+
+  @include max-w($screen-md){
+    width: 100%;
+  }
+  @include max-w($screen-sm){
+    padding-bottom: 40px;
+  }
+
+  .content-wrp {
+    max-width: 360px;
+  }
+}
+
+.menu-logo {
+  display: block;
+  max-width: 189px;
+  margin: 0 auto 85px;
+  opacity: 0;
+
+  @include max-w($screen-xxxl){
+    margin-bottom: 40px;
+  }
+
+  img {
+    width: 100%;
+
+    @include max-w($screen-sm) {
+      width: 60%;
+      margin: 60px auto 0;
+    }
+  }
+}
+
+.right-part {
+  width: 35%;
+
+  @include max-w($screen-xl){
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  @include max-w($screen-sm){
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+
+  .content-wrp{
+    max-width: 340px;
+    opacity: 0;
+
+    @include max-w($screen-sm){
+      max-width: 240px;
+    }
+  }
+}
+
+.menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  opacity: 0;
+
+  &__item {
+    text-align: center;
+    >a{
+      display: inline-block;
+      font-family: $bold-font;
+      font-size: 42px;
+      line-height: 68px;
+      color: $menu-item-color;
+      transition: .3s;
+
+      &:hover {
+        color: darken( $menu-item-color, 10%);
+      }
+
+      @include max-w($screen-xxl){
+        font-size: 32px;
+        line-height: 45px;
+      }
+
+      @include max-w($screen-xl){
+        font-size: 28px;
+        line-height: 40px;
+      }
+
+    }
+  }
+}
+
+.block-info{
+  color: #a1ac96;
+  margin-bottom: 55px;
+
+  &:hover{
+    color: darken(#a1ac96, 25%);
+  }
+
+  @include max-w($screen-xxxl){
+    margin-bottom: 35px;
+  }
+
+  @include max-w($screen-xxl){
+    margin-bottom: 22px;
+  }
+
+  @include max-w($screen-lg){
+    margin-bottom: 15px;
+  }
+
+  &__title{
+    font-family: $title-font;
+    font-size: 30px;
+    line-height: 33px;
+    color: #a1ac96;
+    transition: .3s;
+
+    &:hover{
+      color: darken(#a1ac96, 25%);
+    }
+
+    @include max-w($screen-xl){
+      font-size: 25px;
+    }
+
+    @include max-w($screen-lg){
+      line-height: 27px;
+    }
+  }
+
+  &__description{
+    display: block;
+    font-family: $bold-font;
+    font-weight: $bold-font-w;
+    font-size: 17px;
+
+    @include max-w($screen-xl){
+      font-size: 14px;
+    }
+  }
+
+  &:last-of-type{
+    margin-bottom: 120px;
+
+    @include max-w($screen-xl){
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.social-link{
+  display: block;
+  margin-bottom: 30px;
+
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+}
+
+.pre-form-text {
+  color: #5e6656;
+  font-size: 17px;
+  font-family: $bold-font;
+  margin-bottom: 22px;
+
+  @include max-w($screen-sm-start){
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+
+.sign-up-form{
+  display: none;
+  max-width: 336px;
+  width: 100%;
+  position: relative;
+
+  @include max-w($screen-sm-start){
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  input[type='email'],
+  input[type='text']{
+    border: 2px solid #5e6656;
+    color: #5e6656;
+    font-family: $bold-font;
+    transition: 0.5s;
+    padding-right: 115px;
+
+    &::placeholder{
+      color: #5e6656;
+      font-family: $bold-font;
+    }
+
+    &.no-valid{
+      border-color: red;
+      color: red;
+    }
+  }
+}
+
+#sign-up{
+  cursor: pointer;
+}
+
+.first-step {
+  transition: 0.5s;
+  text-align: right;
+  position: relative;
+  margin: 8px 0 12px;
+  overflow: hidden;
+
+  //button bigger then input on upscale fix
+  & > input[type="text"] {
+    margin: 0 !important;
+  }
+
+  .btn--menu {
+    top: 0;
+  }
+}
+
+
+.second-step {
+  position: absolute;
+  width: 100%;
+  top: 74px;
+  left: 0;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  text-align: right;
+  margin: 8px 0 12px;
+  overflow: hidden;
+
+  //button bigger then input on upscale fix
+  & > input[type="email"] {
+    margin: 0 !important;
+  }
+
+  .btn--menu {
+    top: 0;
+  }
+}
+
+.hidden-input {
+  visibility: hidden;
+  opacity: 0;
+}

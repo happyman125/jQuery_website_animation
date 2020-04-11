@@ -1,0 +1,32 @@
+{
+  "path": {
+    "src": "./src/",
+    "dist": "./build/"
+  },
+  "assets": {
+    "addJs": [
+      "./node_modules/jquery/dist/jquery.min.js",
+      "./src/scripts/jquery.cookiebar.js",
+      "./src/scripts/jReject.js",
+      "./src/scripts/Promise.js",
+      "./node_modules/popper.js/dist/umd/popper.min.js",
+      "./node_modules/velocity-animate/velocity.min.js",
+      "./node_modules/velocity-animate/velocity.ui.min.js",
+      "./src/scripts/ScrollToPlugin.min.js",
+      "./src/scripts/TweenMax.min.js",
+      "./node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js",
+      "./node_modules/scrollmagic/scrollmagic/minified/plugins/animation.velocity.min.js",
+      "./node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js",
+      "./node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js",
+      "./src/scripts/jQuery.scrollSpeed.js",
+      "./node_modules/slick-carousel/slick/slick.min.js",
+      "./node_modules/progressbar.js/dist/progressbar.min.js",
+      "./src/scripts/jquery.validate.js",
+      "./src/scripts/jquery.validate.unobtrusive.js",
+      "./src/scripts/jquery.unobtrusive-ajax.min.js"
+    ],
+    "addCss": [
+      "./node_modules/slick-carousel/slick/slick.css"
+    ]
+  }
+}

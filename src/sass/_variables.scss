@@ -1,0 +1,69 @@
+//  Color
+$main-color: #fff;
+
+$body-bg: #fff;
+$text-color: #333;
+$icon-menu: #4a591a;
+
+$info-section-title-color: #4a591a;
+$info-small-text-color: #a1ac96;
+
+$find-section-color: #a2742b;
+
+$img-description: rgba(161, 172, 150, 1);
+
+$slider-section-title: #5c6454;
+$slider-section-text: #737d69;
+$slider-section-btn: #a1ac96;
+
+$ecology-section-color: #779027;
+
+$market-section-color: #a2742b;
+
+$market-zone-color: #de9c34;
+$market-decor-color: #e29f34;
+
+$contact-color: #a2742b;
+$email-color: #779027;
+
+$menu-item-color: #5e6656;
+
+$press-color: rgba(161, 172, 150, 0.8);
+
+// Link сolor
+$link-color: $main-color;
+$link-color--hover: $main-color;
+
+// Typography
+$base-font: 'NewsGoth BT Roman', sans-serif;
+$bold-font: 'News Gothic Condensed Bold', sans-serif;
+$title-font: 'Archer Book', serif;
+
+$font-size: 16px;
+$font-weight: 400; // Regular
+$line-height: 20px;
+
+$title-font-size: 80px;
+$title-line-height: 80px;
+
+$sub-title-font-size: 29px;
+$sub-title-font-line-height: 33px;
+
+$regular-font-weght: 400;
+$bold-font-w: 700;
+/*// Ширина контейнера
+
+$container-padding: 15px;
+$container-width: 1170px + $container-padding * 2;*/
+
+//  Адаптивность и соответствующие ширины контейнера
+
+$screen-xs: 320px;
+$screen-375: 375px;
+$screen-sm: 480px;
+$screen-sm-start: 767px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xxl: 1440px;
+$screen-xxxl: 1919px;

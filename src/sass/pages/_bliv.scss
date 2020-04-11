@@ -1,0 +1,59 @@
+.form{
+  &__text{
+    max-width: 1024px;
+    margin: 50px auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .section-title{
+      color: #737d69;
+      max-width: 723px;
+      font-size: 59px;
+      line-height: 53.24px;
+      margin: 0 auto 25px;
+
+      @include max-w($screen-sm-start){
+        font-size: 35px;
+        line-height: 38px;
+      }
+
+      span{
+        display: block;
+
+        @include max-w($screen-sm-start){
+          display: inline-block;
+        }
+
+        &:first-of-type{
+          padding-left: 145px;
+          @include max-w($screen-sm-start){
+            padding-left: 0;
+          }
+        }
+
+        &:last-of-type{
+          padding-left: 70px;
+          @include max-w($screen-sm-start){
+            padding-left: 0;
+          }
+        }
+      }
+    }
+
+    .section-text{
+      color: #5e6656;
+      padding-bottom: 50px;
+
+      p{
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      h3{
+        font-size: 21px;
+        margin-bottom: 0;
+        margin-top: 20px;
+      }
+    }
+  }
+}

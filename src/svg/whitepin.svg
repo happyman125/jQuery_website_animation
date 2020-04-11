@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="62"
+     viewBox="0 0 56 62">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: #e29f35;
+            }
+        </style>
+    </defs>
+    <path class="cls-1"
+          d="M7.992,41.5L28.5,20.991,49,41.5,28.5,62ZM28,0A27.891,27.891,0,1,1,0,27.891,27.945,27.945,0,0,1,28,0Z"/>
+
+    <image id="hm13_logo_udato_outline_copy" data-name="hm13_logo_udato_outline copy" x="21" y="11" width="14"
+           height="34"
+           xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAiCAMAAABY+BiuAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABSlBMVEX////inzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzTinzQAAADPB8e7AAAAbHRSTlMAAXXgvQVOI27GCnK+yg+eurmGDJH4CVpHOGUfFP7cY7+B7DRqpAZfsBHHQIQrwUlN5lgDgrTw5buOJOEQP8Pv0U/1jdUyC6CSyz1g9Dlx47EnFVyzhfyUFsXyelKVtvogbWk3mYv3zMKtKImmprmAAAAAAWJLR0RtuwYArQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+IBGgknKQI6n+QAAAEUSURBVBjTTdFXV8JAEAXgi9hQgyUmGhQLClZsYFfsvYJYsfdy//+zm53NgXnYk+8ke2c2C5gKVYVZXSPPtXWoJyMNRmxEE62o+bCZLWhts4N97XRclKuD7IQXE3ShO06rh5ZWbx8Qoap+X3aCAxhUSqZ8DpHDGHFGx2TnuHrhIR2kxhQnQsDklKY9rTyTycZnNTNzivML5KLmEqWWVzRXDXMS5RmGhe6acN102tjU3Ao6p7d97ph/BOzu+Un7+vgHh2o5Oj5xnVOfZzzPAwVcsOjzkry6vgFycnz3VuXcle7JB2n8KI2fniX7xcz1KnwzdPLiovG7GfvjU/MrmLNQSih+ly8i+kNmKy4mlORvBZH6U8s/fTBOB55EIXIAAAAASUVORK5CYII="/>
+</svg>

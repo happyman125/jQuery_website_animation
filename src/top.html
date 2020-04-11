@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Top page</title>
+  <meta name="description" content="">
+  @@include('_include/head.html')
+</head>
+<body>
+@@include('_include/header.html')
+
+<div id="tadaoverlay"></div>
+<section class="intro">
+  <div class="intro__banner">
+    <div class="intro__bg">
+      <div class="section-img-l-board" id="hero-img-bord-left"></div>
+      <div class="section-img-r-board" id="hero-img-bord-right"></div>
+      <div class="section-img-t-board" id="hero-img-bord-top"></div>
+      <div class="section-img-b-board" id="hero-img-bord-bot"></div>
+      <div id="tada"></div>
+    </div>
+  </div>
+
+  <div class="overlay-intro-text"></div>
+  <div class="intro__text">
+    <h1 class="section-title">Topkærgaard</h1>
+    <h4 class="section-sub-title section-sub-title--sm-width">Der er lagt op til en dejlig dag for hele familien, når
+      Topkærgaard for første gang
+      slår dørene op til et hyggeligt høstmarked. Tag med på markvandring, oplev en 100% økologisk gårdbutik og sig hej
+      til de søde bondegårdsdyr. Vi glæder os!</h4>
+    <div class="btn-intro-wrp">
+      <a href="#" class="btn btn--section-grey">Se gårdens dyr</a>
+      <a href="#" class="btn btn--section-grey">Find vej til gården</a>
+    </div>
+    <div class="intro-content intro-content--lg-width flex-container flex-container--jastify-between">
+      <div class="intro-content__item">
+        <div class="icon-wrp">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.5 74.33"><defs><style>.cls-1{fill:#1C1F19;}</style></defs><title>Vector Smart Object1</title><path class="cls-1" d="M32.35,73.46,19.74,60.85a31.45,31.45,0,1,1,25.22,0Zm0-67.88A26.45,26.45,0,0,0,22.13,56.43l.46.2,9.76,9.76,9.76-9.76.46-.2A26.45,26.45,0,0,0,32.35,5.58Z"/><path class="cls-1" d="M32.35,46.58a15,15,0,1,1,15-15A15,15,0,0,1,32.35,46.58Zm0-25a10,10,0,1,0,10,10A10,10,0,0,0,32.35,21.58Z"/></svg>
+        </div>
+        <div>
+          <div class="content-title">
+            Adresse
+          </div>
+          <div class="content-text">
+            Topkærvej 3<br>
+            8200 Aarhus
+          </div>
+        </div>
+      </div>
+      <div class="intro-content__item">
+        <div class="icon-wrp">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.17 82"><defs><style>.cls-1{fill:#1C1F19;}</style></defs><title>Vector Smart Object1</title><path class="cls-1" d="M15.66,25.39s.31-.08,5.82-3.05c4.63-2.5,4.9-6.23,4.4-7.85l-.22-.74s-4.52,1.59-7.24,2.65L15.13,4.31a5.87,5.87,0,0,0-3.89,3.92c-1.14,4,4.42,17.16,4.42,17.16"/><path class="cls-1" d="M26.82,1A26.45,26.45,0,0,1,31.44,1s-3.55,3.85-5.81,6.25a7.37,7.37,0,0,1-3.19,2.19c-1.45.4-2.67.63-2.67.63s.33-4.45,1.27-6A7.88,7.88,0,0,1,26.82,1"/><path class="cls-1" d="M17,73.52c4.83,2,8.45,7.81,8.45,7.81s2.63-6,2.89-8.6c.5-5.14-3-8.43-4.58-10.54a12.86,12.86,0,0,0,2-4c.85-3.53-1-8.87-2.91-9.54,0,0-1.51,7.29-4.7,11.77L1,50.7l0,.85c-.1,2.89.82,6.66,5.91,10.06C6.73,64.2,7.4,67.25,9,69c1.22,1.32,2,2,8,4.53"/><path class="cls-1" d="M4.85,44.7l11.7,8.95a35,35,0,0,0,4.53-9.94A14.65,14.65,0,0,0,21,36.09a14.39,14.39,0,0,0,2.26-3.42c1-2.5-1-5-1-5L14.88,33.4A116.68,116.68,0,0,1,6.3,16.67s-4.22,4.57-4.25,9.26a8.09,8.09,0,0,0,1.88,5.2C3,34,1.2,41.19,4.85,44.7"/></svg>
+        </div>
+        <div>
+          <div class="content-title">
+            Værter
+          </div>
+          <div class="content-text">
+            Kim og Lene Qvist, Anders,<br>
+            Sille og Clara Qvist Duus
+          </div>
+        </div>
+      </div>
+      <div class="intro-content__item">
+        <div class="icon-wrp">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68.33 68.5"><defs><style>.cls-1{fill:#1C1F19;}</style></defs><title>Vector Smart Object1</title><path class="cls-1" d="M35.54,12.54c0,1-.57,1.73-1.28,1.73h0c-.7,0-1.28-.77-1.28-1.73V5.64c0-1,.58-1.73,1.28-1.73h0c.71,0,1.28.77,1.28,1.73Z"/><path class="cls-1" d="M35.54,62.43c0,1-.57,1.73-1.28,1.73h0c-.7,0-1.28-.78-1.28-1.73V55.52c0-1,.58-1.73,1.28-1.73h0c.71,0,1.28.78,1.28,1.73Z"/><path class="cls-1" d="M55.75,35.65c-1,0-1.72-.58-1.72-1.28h0c0-.71.77-1.28,1.72-1.28h6.91c1,0,1.73.57,1.73,1.28h0c0,.7-.78,1.28-1.73,1.28Z"/><path class="cls-1" d="M5.87,35.65c-1,0-1.73-.58-1.73-1.28h0c0-.71.77-1.28,1.73-1.28h6.9c1,0,1.73.57,1.73,1.28h0c0,.7-.77,1.28-1.73,1.28Z"/><polygon class="cls-1" points="22.71 45.47 20.81 42.72 33.64 33.84 17.8 18 20.16 15.64 38.83 34.31 22.71 45.47"/><path class="cls-1" d="M34.1,67.6A33.4,33.4,0,1,1,67.49,34.2,33.43,33.43,0,0,1,34.1,67.6Zm0-61.19A27.79,27.79,0,1,0,61.89,34.2,27.83,27.83,0,0,0,34.1,6.41Z"/></svg>
+        </div>
+        <div>
+          <div class="content-title">
+            Tidspunkt
+          </div>
+          <div class="content-text">
+            Både lørdag og søndag<br>
+            kl. 10.00 - 17.00
+          </div>
+        </div>
+      </div>
+      <div class="intro-content__item">
+        <div class="icon-wrp">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.83 62.17"><defs><style>.cls-1{fill:#1C1F19;}</style></defs><title>Vector Smart Object1</title><path class="cls-1" d="M27.09,47.16c-6.93,0-10.71-4.06-10.71-11.48,0-10.92,7.42-19,16.1-19,4.06,0,6.72,1.54,8.47,4.83l1.89-3.64h5.25l-5,20a10.34,10.34,0,0,0-.28,1.68c0,1.75,1.33,2.87,3.29,2.87,2.17,0,4.9-1.33,7.28-3.92a19.47,19.47,0,0,0,5-13.45c0-11.34-9.1-19.46-23.1-19.46a29.25,29.25,0,0,0-16.1,4.27A26.93,26.93,0,0,0,6.29,33.3c0,14.21,10.37,23.45,26.26,23.45a36.74,36.74,0,0,0,21-6.51l2.31,3.36a37.47,37.47,0,0,1-23,7.77c-8.82,0-16.1-2.24-21.64-6.51C4.12,49.47.69,42.33.69,33.23a31.29,31.29,0,0,1,7-20C14.35,5.08,23.87.74,35.49.74,43.26.74,50.26,3,55,6.62A22,22,0,0,1,64,25a23.23,23.23,0,0,1-8.54,18.41,17.28,17.28,0,0,1-10.85,3.85c-4.83,0-7.14-1.82-7.14-5.67v-.14A11.22,11.22,0,0,1,27.09,47.16ZM33.18,20.9c-5.74,0-10.5,6.66-10.5,15,0,4.55,2.17,7,5.95,7,4,0,7.77-3.22,9-8.19l1.89-7.77C38.85,23.07,36.61,20.9,33.18,20.9Z"/></svg>
+        </div>
+        <div>
+          <div class="content-title">
+            Kontakt
+          </div>
+          <div class="content-text">
+            sille@topkaergaard.dk
+            +45 2895 1435
+            <a href="www.topkaergaard.dk" class="site-link">www.topkaergaard.dk</a>
+            <a href="www.facebook.com/topkaergaard" class="site-link">www.facebook.com/topkaergaard</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hvad-section">
+  <div class="hvad-section__container flex-container flex-container--align-start flex-container--jastify-between">
+    <div class="hvad-section__img">
+      <img src="images/hvan-img.png" alt="Help images">
+    </div>
+    <div class="hvad-section__text">
+      <h2 class="section-title">
+        Hvad kan
+        <span>jeg opleve?</span>
+      </h2>
+
+      <div class="list-wrp">
+        <h4 class="section-sub-title">
+          Aktiviteter
+        </h4>
+        <ul class="hvad-list">
+          <li><i class="icon icon-list-icon"></i>Tag med på markvandring (se program)</li>
+          <li><i class="icon icon-list-icon"></i>Kom til Vin- og Oliesmagning (se program)</li>
+          <li><i class="icon icon-list-icon"></i>Hør spændende oplæg om økologisk fisk og skaldyr (se program)</li>
+          <li><i class="icon icon-list-icon"></i>Saml æg med landmanden. Tidspunkt for aktivitet kommer Saml æg med landmanden. Tidspunkt for aktivitet kommer</li>
+          <li><i class="icon icon-list-icon"></i>Besøge den økologiske gårdbutik med over 1200 varenumre</li>
+          <li><i class="icon icon-list-icon"></i>Smagsprøver på lækre økologiske produkter</li>
+          <li><i class="icon icon-list-icon"></i>Maskine-hjørnet</li>
+          <li><i class="icon icon-list-icon"></i>Torv-træk</li>
+          <li><i class="icon icon-list-icon"></i>"Flyt en ko"</li>
+          <li><i class="icon icon-list-icon"></i>Tag på økojagt</li>
+          <li><i class="icon icon-list-icon"></i>Spis en fantastisk økologisk middag, lavet af skønne råvarer af Aarhus
+            kok
+          </li>
+          <li><i class="icon icon-list-icon"></i>Legepladsen har både halmpyramide, gå på line og legetøj</li>
+          <li><i class="icon icon-list-icon"></i>Gå tur ned gennem markerne, ned til den kommende Topkærgaard skov</li>
+          <li><i class="icon icon-list-icon"></i>Snak med bondegårdsdyrene</li>
+          <li><i class="icon icon-list-icon"></i>Giv græs til alle dyrene</li>
+          <li><i class="icon icon-list-icon"></i>Pixibøger til de mindste så længe lager haves</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hvad-section__container flex-container flex-container--align-start flex-container--jastify-between">
+  <div class="hvad-section__img">
+      <img src="http://hm.dynamikfabrikken.com/media/1225/topkaergaard1_juni2017_morten_telling-50-e1518605625747.jpg?anchor=center&amp;mode=crop&amp;width=1144&amp;height=840&amp;rnd=131661566560000000" alt="">
+  </div>
+  <div class="hvad-section__text">
+      <h2 class="section-title" style="color: #779027;">
+          Hvad kan
+          <span>jeg opleve?</span>
+      </h2>
+
+      <div class="list-wrp">
+          <h4 class="section-sub-title" style="color: #779027;">
+              Aktiviteter på Topkærgaard
+          </h4>
+          <ul class="hvad-list hvad-list--green">
+                  <li><i class="icon icon-icon-list-g"></i>Tag med på markvandring (se program)</li>
+                  <li><i class="icon icon-icon-list-g"></i>Kom til Vin- og Oliesmagning (se program)</li>
+                  <li><i class="icon icon-icon-list-g"></i>Hør spændende oplæg om økologisk fisk og skaldyr (se program)</li>
+                  <li><i class="icon icon-icon-list-g"></i>Saml æg med landmanden. Tidspunkt for aktivitet kommer</li>
+                  <li><i class="icon icon-icon-list-g"></i>Besøge den økologiske gårdbutik med over 1200 varenumre</li>
+                  <li><i class="icon icon-icon-list-g"></i>Smagsprøver på lækre økologiske produkter</li>
+                  <li><i class="icon icon-icon-list-g"></i>Maskine-hjørnet</li>
+                  <li><i class="icon icon-icon-list-g"></i>Torv-træk</li>
+                  <li><i class="icon icon-icon-list-g"></i>"Flyt en ko"</li>
+                  <li><i class="icon icon-icon-list-g"></i>Tag på økojagt</li>
+                  <li><i class="icon icon-icon-list-g"></i>Spis en fantastisk økologisk middag, lavet af skønne råvarer af Aarhus kok</li>
+                  <li><i class="icon icon-icon-list-g"></i>Legepladsen har både halmpyramide, gå på line og legetøj</li>
+                  <li><i class="icon icon-icon-list-g"></i>Gå tur ned gennem markerne, ned til den kommende Topkærgaard skov</li>
+                  <li><i class="icon icon-icon-list-g"></i>Snak med bondegårdsdyrene</li>
+                  <li><i class="icon icon-icon-list-g"></i>Giv græs til alle dyrene</li>
+                  <li><i class="icon icon-icon-list-g"></i>Pixibøger til de mindste så længe lager haves</li>
+
+          </ul>
+      </div>
+  </div>
+</div>
+
+<section class="program-section">
+  <div class="program-section__container flex-container flex-container--align-start flex-container--jastify-between">
+      <div class="program-section__check">
+          <h2 class="section-title" style="color: #a2742b;">
+              Husk...
+          </h2>
+          <div class="text-content">
+              <ul class="hvad-list ">
+                      <li style="color: #a2742b;"><i class="icon icon-list-icon"></i>Lad dine fine sko blive derhjemme, og hop i stedet i et par gummistøvler, der kan vaskes</li>
+                      <li style="color: #a2742b;"><i class="icon icon-list-icon"></i>Gem dit pæneste tøj til senere, og kom i praktisk tøj, der kan tåle at blive beskidt.</li>
+                      <li style="color: #a2742b;"><i class="icon icon-list-icon"></i>Gør som din mor siger, og vask hænder før og efter et gårdbesøg. Ingen fodring af dyr.</li>
+                      <li style="color: #a2742b;"><i class="icon icon-list-icon"></i>Kør hjemmefra i god tid.</li>
+                      <li style="color: #a2742b;"><i class="icon icon-list-icon"></i>Undgå at besøge mere end én gård på Høstmarkedet.</li>
+                      <li style="color: #a2742b;"><i class="icon icon-list-icon"></i>Du må ikke have været i kontakt med klovbærende dyr i udlandet inden for de seneste 48 timer inden et besøg på en gård, da du kan bringe dyresygdomme med fra udlandet.</li>
+                      <li style="color: #a2742b;"><i class="icon icon-list-icon"></i>Du må ikke have været i kontakt med andre dyr, af samme art som dem på den gård du besøger, de sidste 48 timer før dit besøg på en gård, med mindre værten har accepteret det.</li>
+              </ul>
+          </div>
+      </div>
+      <div class="program-section__img">
+              <img src="http://hm.dynamikfabrikken.com/media/1073/program-img.png?anchor=center&amp;mode=crop&amp;width=1144&amp;height=840&amp;rnd=131636918140000000" alt="Pige tommelUp">
+      </div>
+  </div>
+</section>
+
+
+<section class="hvad-section hvad-section--green">
+  <div class="hvad-section__container flex-container flex-container--align-start flex-container--jastify-between">
+    <div class="hvad-section__img">
+      <img src="images/hvan-img.png" alt="Help images">
+    </div>
+    <div class="hvad-section__text hvad-section__text--green">
+      <h2 class="section-title section-title--green">
+        Hvad kan
+        <span>jeg opleve?</span>
+      </h2>
+
+      <div class="list-wrp">
+        <h4 class="section-sub-title">
+          Aktiviteter
+        </h4>
+        <ul class="hvad-list hvad-list--green">
+          <li><i class="icon icon-icon-list-g"></i>Tag med på markvandring (se program)</li>
+          <li><i class="icon icon-icon-list-g"></i>Kom til Vin- og Oliesmagning (se program)</li>
+          <li><i class="icon icon-icon-list-g"></i>Hør spændende oplæg om økologisk fisk og skaldyr (se program)</li>
+          <li><i class="icon icon-icon-list-g"></i>Saml æg med landmanden. Tidspunkt for aktivitet kommer Saml æg med landmanden. Tidspunkt for aktivitet kommer</li>
+          <li><i class="icon icon-icon-list-g"></i>Besøge den økologiske gårdbutik med over 1200 varenumre</li>
+          <li><i class="icon icon-icon-list-g"></i>Smagsprøver på lækre økologiske produkter</li>
+          <li><i class="icon icon-icon-list-g"></i>Maskine-hjørnet</li>
+          <li><i class="icon icon-icon-list-g"></i>Torv-træk</li>
+          <li><i class="icon icon-icon-list-g"></i>"Flyt en ko"</li>
+          <li><i class="icon icon-icon-list-g"></i>Tag på økojagt</li>
+          <li><i class="icon icon-icon-list-g"></i>Spis en fantastisk økologisk middag, lavet af skønne råvarer af Aarhus
+            kok
+          </li>
+          <li><i class="icon icon-icon-list-g"></i>Legepladsen har både halmpyramide, gå på line og legetøj</li>
+          <li><i class="icon icon-icon-list-g"></i>Gå tur ned gennem markerne, ned til den kommende Topkærgaard skov</li>
+          <li><i class="icon icon-icon-list-g"></i>Snak med bondegårdsdyrene</li>
+          <li><i class="icon icon-icon-list-g"></i>Giv græs til alle dyrene</li>
+          <li><i class="icon icon-icon-list-g"></i>Pixibøger til de mindste så længe lager haves</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="program-section">
+  <div class="program-section__container flex-container flex-container--align-start flex-container--jastify-between">
+    <div class="program-section__text">
+      <h2 class="section-title">
+        Program
+      </h2>
+
+      <div class="text-content">
+        <h4 class="section-sub-title">
+          Lørdag den 1. september
+        </h4>
+
+        <ul class="program-day">
+          <li><span class="time">Kl. 10.00</span><p class="program-caption">Gården åbner</p></li>
+          <li><span class="time">kl. 11.00</span><p class="program-caption">Markvandring</p></li>
+          <li><span class="time">kl. 14.00</span><p class="program-caption">Saml æg med landmanden. Tidspunkt for aktivitet kommerSaml æg med landmanden. Tidspunkt for aktivitet kommer</p></li>
+          <li><span class="time">kl. 17.00</span><p class="program-caption">Gården lukker</p></li>
+        </ul>
+
+        <h4 class="section-sub-title">
+          Søndag den 2. september
+        </h4>
+
+        <ul class="program-day">
+          <li><span class="time">Kl. 10.00</span><p class="program-caption">Gården åbner</p></li>
+          <li><span class="time">kl. 11.00</span><p class="program-caption">Markvandring</p></li>
+          <li><span class="time">kl. 14.00</span><p class="program-caption">Vin- og Oliesmagning</p></li>
+          <li><span class="time">kl. 17.00</span><p class="program-caption">Gården lukker</p></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="program-section__img">
+      <img src="images/program-img.png" alt="Help images">
+    </div>
+  </div>
+</section>
+
+<section class="eat-section">
+  <div class="eat-section__container">
+    <div class="eat-section__img">
+      <img src="images/eat-img.png" alt="Help images">
+
+
+      <div class="eat-section-overlay"></div>
+      <div class="eat-section__text">
+        <div class="text-content">
+          <h2 class="section-title">
+            Spis under
+            <span>åben himmel</span>
+          </h2>
+
+          <div class="description-content">
+            <h4 class="section-sub-title">Nyde en fantastisk tallerken mad midt ude på marken, sammensat og lavet af
+              skøn Aarhus kok</h4>
+
+            <div class="description-text">
+              <p>Vi håber at I vil købe madbillet til en udsøgt middag og spise den under åben himmel. Man kan købe
+                madbilletter på selve dagen i informationsteltet i gårdspladsen. Madbilletter kan også forudbestilles
+                ved at skrive en mail til sille@topkærgaard.dk eller via. Facebook. Priser og menu fremgår af
+                facebookbegivenheden</p>
+
+              <p>Vi glæder os til en skøn weekend i økologiens tegn!</p>
+            </div>
+          </div>
+
+          <a href="#" class="btn btn--eat-section">Se priser og menu</a>
+          <a href="#" class="btn btn--eat-section">Forudbestil</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="farm-section">
+  <div class="farm-section__container flex-container flex-container--align-start flex-container--jastify-between">
+    <div class="farm-section__text">
+      <h2 class="section-title">
+        Gårdens dyr
+      </h2>
+
+      <div class="text-content">
+        <div class="description-content">
+          <h4 class="section-sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel ligula nibh
+            mauris molestie lectus.</h4>
+
+          <div class="description-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel ligula nibh. Mauris molestie lectus dictum
+            lacus ornare, id ultrices arcu consectetur. Integer a tempor ante, vitae posuere sem. Sed pretium interdum
+            fermentum. Morbi lacinia enim ac ex finibus, tincidunt vulputate risus accumsan. Vivamus eu lacus ex.
+            Maecenas interdum efficitur nulla id auctor. Sed euismod in mi quis lacinia.
+          </div>
+        </div>
+      </div>
+
+      <div class="animal-box">
+        <div class="animal-box__item">
+          <div class="icon-wrp">
+            <i class="icon icon-ko"></i>
+          </div>
+          <div class="animal-name">Malkekøer</div>
+        </div>
+
+        <div class="animal-box__item">
+          <div class="icon-wrp">
+            <i class="icon icon-far"></i>
+          </div>
+          <div class="animal-name">Får og lam</div>
+        </div>
+
+        <div class="animal-box__item">
+          <div class="icon-wrp">
+            <i class="icon icon-ged"></i>
+          </div>
+          <div class="animal-name">Geder</div>
+        </div>
+
+        <div class="animal-box__item">
+          <div class="icon-wrp">
+            <i class="icon icon-gris"></i>
+          </div>
+          <div class="animal-name">Grise</div>
+        </div>
+
+        <div class="animal-box__item">
+          <div class="icon-wrp">
+            <i class="icon icon-coco"></i>
+          </div>
+          <div class="animal-name">Høns og æg</div>
+        </div>
+
+        <div class="animal-box__item">
+          <div class="icon-wrp">
+            <i class="icon icon-gus"></i>
+          </div>
+          <div class="animal-name">Ænder og gæs</div>
+        </div>
+
+        <div class="animal-box__item">
+          <div class="icon-wrp">
+            <i class="icon icon-ol"></i>
+          </div>
+          <div class="animal-name">Hjorte</div>
+        </div>
+
+        <div class="animal-box__item">
+          <div class="icon-wrp">
+            <i class="icon icon-bzz"></i>
+          </div>
+          <div class="animal-name">Bier</div>
+        </div>
+
+        <div class="animal-box__item">
+          <div class="icon-wrp">
+            <i class="icon icon-co-2"></i>
+          </div>
+          <div class="animal-name">Kødkvæg</div>
+        </div>
+
+        <div class="animal-box__item">
+          <div class="icon-wrp">
+            <i class="icon icon-coco-2"></i>
+          </div>
+          <div class="animal-name">Slagtekyllinger</div>
+        </div>
+
+        <div class="animal-box__item">
+          <div class="icon-wrp">
+            <i class="icon icon-ind"></i>
+          </div>
+          <div class="animal-name">Kalkuner</div>
+        </div>
+
+        <div class="animal-box__item">
+          <div class="icon-wrp">
+            <i class="icon icon-ho"></i>
+          </div>
+          <div class="animal-name">Heste</div>
+        </div>
+
+        <div class="animal-box__item">
+          <div class="icon-wrp">
+            <i class="icon icon-Lama"></i>
+          </div>
+          <div class="animal-name">Lama</div>
+        </div>
+
+        <div class="animal-box__item">
+          <div class="icon-wrp">
+            <i class="icon icon-Kanin"></i>
+          </div>
+          <div class="animal-name">Kanin</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="farm-section__img">
+      <img src="images/farm-img.png" alt="Help images">
+    </div>
+  </div>
+</section>
+
+<section class="live-section">
+  <div class="live-section__container">
+    <div class="live-section__text">
+      <h2 class="section-title">
+        Gårdens dyr
+      </h2>
+      <div class="text-content">
+        <div class="description-text">
+          <p> Topkærgaard ligger smukt midt i det skønne landskab ved Kasted – mellem Skejby og Tilst. Faktisk er
+            Topkærgaard placeret bare 8 km fra Aarhus Centrum. Gården drives af to familier og tre generationer: Kim &
+            Lene, Anders, Sille & Clara.</p>
+
+          <p> På Topkærgaard driver vi, ud over økologisk landbrug og gårdbutik, også en socialøkonomisk virksomhed,
+            hvor vi
+            afhjælper borgere i afklarings- og ressourceforløb. Her vægtes mennesker, dyrevelfærd og økologi højest, og
+            vi
+            lever efter udsagnet: ”Jorden har vi lånt af vores børnebørn”. Bedriften består af køer, får, lam, geder,
+            grise, høns, ænder og gæs og heste samt 45 ha jord, som netop er omlagt til økologi.</p>
+
+          <p>Vi har en gårdbutik med over 1.200 varenumre og sælger ligeledes abonnementskasser til virksomheder. Alt
+            sammen kun med økologiske produkter.</p>
+
+          <p>Til Høstmarkedet kan I hilse på alle vores dyr, få et lille indblik i, hvordan livet på gården foregår,
+            høre
+            om økologi og handle i gårdbutikken. Nyde en fantastisk tallerken mad midt ude på marken, sammensat og lavet
+            af skøn Aarhus kok. Der vil også være mulighed for at komme på markvandring med bondemanden, tage på ’Øko
+            jagt’ besøge ’maskinhjørnet’ og meget mere. Der er altså aktiviteter for både store og små.</p>
+
+          <p>Tilmeld dig nyhedsbrevet fra Økologisk Landsforening og få en reminder om Økodag direkte i din mailbox.</p>
+        </div>
+        <div class="btn-group">
+          <a href="#" class="btn btn--section-live">Tilmeld dig en reminder her</a>
+          <a href="#" class="btn btn--section-live">Del på facebook</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="market-section">
+
+  <div class="market-section__container">
+    <div class="market-section__img" id="market-img">
+      <img src="images/market.png" alt="Img 1">
+    </div>
+  </div>
+
+  <div class="overlay-description market-text overlay-description--top"></div>
+  <div class="market-section__text market-section__text--top" id="market-text">
+    <div class="text-content">
+
+      <div class="date-block">
+        <div class="date-block__content">
+          <span>1.-2.</span>
+          <span>September</span>
+        </div>
+      </div>
+
+      <h2 class="section-title">
+        Økologisk Høstmarked
+      </h2>
+
+      <div class="description-content">
+        <div class="description-text">
+          <p>Hvem vil ikke gerne mærke hestens bløde mule, trække økologiske gulerødder op af jorden, plukke æbler eller
+            følge landmanden på markvandring?</p>
+
+          <p>Til Økologisk Høstmarked er det tilladt at se, røre, lugte og smage på økologien og hilse på de økologiske
+            landmænd: Tag en snak om stort og småt, for hos os er der ingen hellige køer. Sidste år trak 63.000 danskere
+            i gummistøvlerne og drog på landet en sensommerdag, hvor landskabet stod malet i gyldne farver og træerne
+            bugnede af modne frugter og bær.</p>
+
+          <p>Vi glæder os til at se dig!</p>
+
+        </div>
+
+        <ul class="marker-zone">
+          <li class="marker-zone__item"><i class="icon icon-mark"></i>80 gårde i hele landet</li>
+          <li class="marker-zone__item"><i class="icon icon-date"></i>2. september – 3. september</li>
+          <li class="marker-zone__item"><i class="icon icon-clock"></i>Klokken 10:00 - 17:00</li>
+          <li class="marker-zone__item"><i class="icon icon-people"></i>592</li>
+        </ul>
+      </div>
+
+      <a href="#" class="btn btn--market-section">Deltag på facebook</a>
+    </div>
+  </div>
+
+</section>
+
+<section class="other-section js-farmsNear" data-latitude="54.871317" data-longitude="9.737630999999965">
+    <div class="other-section__container">
+      <div class="other-section__text">
+        <h2 class="section-title">
+          Andre værter tæt på
+        </h2>
+      </div>
+      <div class="other-box">
+      </div>
+    </div>
+</section>
+
+<!--
+<section class="other-section">
+  <div class="other-section__container">
+    <div class="other-section__text">
+      <h2 class="section-title">
+        Andre værter tæt på
+      </h2>
+    </div>
+    <div class="other-box">
+      <div class="other-box__item">
+        <div class="name">Kærsholm - Overgaard</div>
+        <div class="dist">16,1 km væk fra dig</div>
+        <div class="address">
+          Anders & Anette Overgaard Jensen
+          Skolestien 1, 9280 Storvorde
+        </div>
+        <div class="icon-wrp"><i class="icon icon-eat"></i></div>
+        <a href="#" class="btn btn--other">Læs mere</a>
+      </div>
+
+      <div class="other-box__item">
+        <div class="name">Tårup Østergård</div>
+        <div class="dist">21,3 km væk fra dig</div>
+        <div class="address">
+          Louise Kvist & Peter Kjærgaard
+          Tårupvej 8, 9240 Nibe
+        </div>
+        <div class="icon-wrp"><i class="icon icon-eat"></i><i class="icon icon-ba"></i></div>
+        <a href="#" class="btn btn--other">Læs mere</a>
+      </div>
+
+      <div class="other-box__item">
+        <div class="name">Øster Gingsholm</div>
+        <div class="dist">29,5 km væk fra dig</div>
+        <div class="address">
+          Per & Anette Vestergaard
+          Gingsholmvej 3, 9330 Dronninglund
+        </div>
+        <div class="icon-wrp"><i class="icon icon-vel"></i></div>
+        <a href="#" class="btn btn--other">Læs mere</a>
+      </div>
+
+      <div class="other-box__item">
+        <div class="name">Vester Hebbelstrup</div>
+        <div class="dist">30,2 km væk fra dig</div>
+        <div class="address">
+          Anette & Mogens Larsen
+          Hebbelstrupvej 84, 9700 Brønderslev
+        </div>
+        <div class="icon-wrp"><i class="icon icon-eat"></i></div>
+        <a href="#" class="btn btn--other">Læs mere</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+-->
+
+
+@@include('_include/footer.html')
+@@include('_include/inc_script.html')
+</body>
+</html>

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Home page</title>
+  <meta name="description" content="">
+  @@include('_include/head.html')
+</head>
+
+<body class="home-page" data-scrolltime="1" data-scrolldistance="350" data-cookie-message="Siden bruger cookies. Klik på godkend for at slippe for denne besked" data-cookie-policyurl="/privacy-policy/" data-cookie-policyurl-text="Læs mere" data-cookie-policyurl-accepttext="Godkend">
+
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBut9ija2JnhGglwDWt3VEcE3IjUYuCviE&libraries=places,geometry"></script>
+
+<div class="content_wrapper">
+  @@include('_include/header.html')
+
+  <div class="content_wrapper_sections">
+    <section class="hero">
+      <div class="hero__banner flex-container flex-container--column flex-container--align-center js-animation-banner">
+        <div class="section-img-l-board" id="hero-img-bord-left"></div>
+        <div class="section-img-r-board" id="hero-img-bord-right"></div>
+        <div class="section-img-t-board" id="hero-img-bord-top"></div>
+        <div class="section-img-b-board" id="hero-img-bord-bot"></div>
+
+        <video class="bg-video" poster="images/hero-banner-home-min.png" id="bgvid" playsinline autoplay muted
+               loop>
+          <source src="video/farm.webm" type="video/webm">
+          <source src="video/farm.mp4" type="video/mp4">
+        </video>
+
+        <a href="#" class="logo">
+          <img src="images/logo.png" alt="Logo">
+        </a>
+
+        <a href="javascript:void(0);" class="btn-scroll-down"><i class="icon icon-down-arrow"></i></a>
+
+        <div class="time-line" id="time_line"></div>
+      </div>
+    </section>
+
+    <div id="trigger" class="spacer s0"></div>
+
+    <section class="info-section" id="section-info">
+
+      <div class="info-section__container">
+        <div class="info-section__img" id="info-img-translate">
+          <div class="section-img-l-board" id="info-img-bord-left"></div>
+          <div class="section-img-t-board" id="info-img-bord-top"></div>
+
+          <div class="js-play-y-video">
+            <img src="images/info-section.png" alt="Img 1">
+          </div>
+
+          <div class="play-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" width="512px" height="512px">
+<g>
+	<path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30   c0,0.371,0.205,0.711,0.533,0.884C22.679,45.962,22.84,46,23,46c0.197,0,0.394-0.059,0.563-0.174l22-15   C45.836,30.64,46,30.331,46,30S45.836,29.36,45.563,29.174z M24,43.107V16.893L43.225,30L24,43.107z" fill="#04a591"/>
+	<path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30   S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z" fill="#04a591"/>
+</g>
+</svg>
+          </div>
+
+
+          <iframe class="youtube-video"
+                  src="https://www.youtube.com/embed/Kb8CW3axqRE?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
+                  allow="encrypted-media; autoplay" allowfullscreen></iframe>
+
+
+        </div>
+
+        <div class="info-section__text" id="info-text">
+          <h2 class="section-title">
+            <span class="text-indent">Bliv værter ved</span>
+            økologisk Høstmarked
+          </h2>
+          <div class="date">Den 1. & 2. september 2018</div>
+          <div class="description-text">
+            Vi vil gerne samarbejde med alle, der vil være med til at sætte fokus på smagen og kvaliteten af
+            økologiske
+            råvarer. Det kan udover økologiske landmænd være virksomheder, relevante foreninger og
+            uddannelsesinstitutioner
+            m.v. Ring til os hvis du ser nogle muligheder, så kan vi i fællesskab finde ud af, hvordan vi
+            kommer
+            videre.
+          </div>
+
+          <a href="#" class="btn btn--section-info">Læs mere og tilmeld dig som vært</a>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="info-section" id="section-info">
+
+      <div class="info-section__container">
+        <div class="info-section__img" id="info-img-translate">
+          <div class="section-img-l-board" id="info-img-bord-left"></div>
+          <div class="section-img-t-board" id="info-img-bord-top"></div>
+
+
+          <video class="local-video" poster="images/hero-banner-home-min.png" playsinline autoplay muted
+                 loop>
+            <source src="video/farm.webm" type="video/webm">
+            <source src="video/farm.mp4" type="video/mp4">
+          </video>
+
+
+        </div>
+
+        <div class="info-section__text" id="info-text">
+          <h2 class="section-title">
+            <span class="text-indent">Bliv værter ved</span>
+            <span class="mobile-indent">økologisk</span>
+            <span class="mobile-indent mobile-indent--second-level">Høstmarked</span>
+          </h2>
+          <div class="date">Den 1. & 2. september 2018</div>
+          <div class="description-text">
+            <a href="#" class="link link--green">Vi</a> vil gerne samarbejde med alle, der vil være med til at sætte fokus på smagen og kvaliteten af
+            økologiske
+            råvarer. Det kan udover økologiske landmænd være virksomheder, relevante foreninger og
+            uddannelsesinstitutioner
+            m.v. Ring til os hvis du ser nogle muligheder, så kan vi i fællesskab finde ud af, hvordan vi
+            kommer
+            videre.
+          </div>
+
+          <a href="#sekort" class="btn btn--section-info">Læs mere og tilmeld dig som vært</a>
+        </div>
+      </div>
+
+    </section>
+
+    <div id="trigger2" class="spacer s1"></div>
+    <section class="find-section">
+      <div class="find-section__container flex-container flex-container--align-start flex-container--jastify-between">
+        <div class="find-section__img">
+          <div class="find-section__img-wrp" id="find-section-img">
+            <div class="section-img-l-board" id="find-img-bord-left"></div>
+            <div class="section-img-r-board" id="find-img-bord-right"></div>
+            <div class="section-img-t-board" id="find-img-bord-top"></div>
+
+            <img src="images/help-images.png" alt="Help images">
+          </div>
+
+          <div class="overlay-description img-desc"></div>
+
+          <div class="img-description img-desc" id="img-desc">
+            <p>I <a href="#" class="link">2017</a> var der 77.000 danskere, som nød sensommervejret til Økologisk Høstmarked.</p>
+          </div>
+        </div>
+
+        <div class="find-section__text" id="find-text">
+          <h2 class="section-title">
+            <span class="find-text-indent find-text-indent--sm">Find vej til</span>
+            Økologisk
+            <span class="find-text-indent find-text-indent--md">Høstmarked</span>
+          </h2>
+
+          <div class="description-content">
+            <h4 class="section-sub-title"><a href="#" class="link link--orange">Her</a> kan du se de gårde og virksomheder, der holder økologisk
+              høstmarked i
+              2018.</h4>
+
+            <div class="description-text">
+              Ikke to gårde er ens. Derfor kan du <a href="#" class="link link--orange">her</a> læse mere om de forskellige gårde og virksomheder du
+              kan
+              besøge på
+              dette års økologiske høstamrked. Kig lidt rundt og brug søgefiltrene til at finde din type
+              høstfest.
+              Vi håber,
+              du finder en gård, der matcher dine behov.
+            </div>
+          </div>
+          <a href="#" class="btn btn--find-section">Find en gård eller virksomheder</a>
+        </div>
+      </div>
+    </section>
+
+    <div id="trigger3" class="spacer s3"></div>
+    <section class="slider-section">
+      <div class="slider-section__container">
+        <div class="slider-container">
+          <div class="section-img-l-board" id="slider-img-bord-left"></div>
+          <div class="section-img-r-board" id="slider-img-bord-right"></div>
+          <div class="section-img-t-board" id="slider-img-bord-top"></div>
+
+          <div id="slider">
+            <div>
+              <img src="images/slider-placeholder.png" alt="">
+            </div>
+            <div>
+              <img src="images/slider-placeholder.png" alt="">
+            </div>
+            <div>
+              <img src="images/slider-placeholder.png" alt="">
+            </div>
+            <div>
+              <img src="images/slider-placeholder.png" alt="">
+            </div>
+            <div>
+              <img src="images/slider-placeholder.png" alt="">
+            </div>
+            <div>
+              <img src="images/slider-placeholder.png" alt="">
+            </div>
+            <div>
+              <img src="images/slider-placeholder.png" alt="">
+            </div>
+            <div>
+              <img src="images/slider-placeholder.png" alt="">
+            </div>
+            <div>
+              <img src="images/slider-placeholder.png" alt="">
+            </div>
+          </div>
+
+          <div class="slider-control" id="control-slider">
+            <button type="button" class="slick-prev"><i class="icon icon-prev"></i></button>
+            <div class="counter-slider"><span class="c-slide" id="cSlide"></span>/<span id="aSlides"></span>
+            </div>
+            <button type="button" class="slick-next"><i class="icon icon-next"></i></button>
+          </div>
+        </div>
+
+        <div class="sub-content-slider">
+
+          <div class="slider-section__text" id="slider-text">
+            <h2 class="section-title">
+              <span class="slider-title-mobile">Om </span>
+              Økologisk
+              <span class="text-indent-slider">Høstmarked</span>
+            </h2>
+
+            <h4 class="section-sub-title">På Økologisk Høstmarked er det tilladt stille spørgsmål og få svar
+              fra
+              dem, der
+              kender økologien bedst - nemlig landmændene. </h4>
+
+            <div class="description-text">
+              <a href="#" class="link link--light-green">Økologisk</a> Høstmarked er hele den økologiske branches fælles høstmarked, hvor alt fra små
+              familiedrevne
+              landbrug til store godser står bag. Med markdrift, kødkvæg, mælkeproduktion, frugt og grønt,
+              får,
+              geder og
+              mange andre dyr er Høstmarkedet et vindue til Danmarks økologiske spisekammer. Vores vision
+              er
+              at
+              skabe en
+              forbrugerevent, som sætter fokus på kvaliteten og mangfoldigheden af de økologiske
+              fødevarer.
+            </div>
+
+            <a href="#" class="btn btn--slider-section">Læs mere om Høstmarked</a>
+            <a href="#" class="btn btn--slider-section">Vigtigt før et gårdbesøg</a>
+          </div>
+          <div class="boy-img-wrp" id="boy">
+            <img src="images/boy.png" alt="boy">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div id="trigger4" class="spacer s4"></div>
+    <section class="ecology-section">
+      <div class="ecology-section__container">
+        <div class="ecology-section__img">
+          <div class="section-img-l-board" id="ecology-img-bord-left"></div>
+          <div class="section-img-r-board" id="ecology-img-bord-right"></div>
+          <div class="section-img-t-board" id="ecology-img-bord-top"></div>
+
+          <!--Video-comment-->
+          <!--<video class="local-video" poster="images/hero-banner-home-min.png" id="bgvid" playsinline autoplay muted
+                 loop>
+            <source src="video/farm.webm" type="video/webm">
+            <source src="video/farm.mp4" type="video/mp4">
+          </video>-->
+
+          <img src="images/ecology.png" alt="Img 1">
+
+          <div class="overlay-description ecology-text"></div>
+          <div class="ecology-section__text ecology-text" id="ecology-text">
+            <div class="text-content">
+              <h2 class="section-title">
+                <span class="mobile-ecology">Forstå hvorfor </span>
+                <span class="mobile-ecology mobile-ecology--second-level">økologi</span>
+                <span class="ecology-text-indent ecology-text-indent--sm">er godt for dig,</span>
+                <span class="ecology-text-indent ecology-text-indent--md">dyrene og naturen</span>
+              </h2>
+
+              <div class="description-content">
+                <h4 class="section-sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit</h4>
+
+                <div class="description-text">
+                  <a href="#" class="link"> Nullam</a> aliquam eros ligula, porta sollicitudin eros auctor ut. Cras finibus, nulla
+                  eget
+                  malesuada tempus,
+                  enim nisi feugiat neque, ac blandit mauris tortor tristique est. Nullam condimentum
+                  convallis hendrerit.
+                  Maecenas bibendum purus sed quam scelerisque porttitor. Suspendisse nec rutrum
+                  mauris,
+                  consequat maximus
+                  nunc. Ut volutpat dui in vestibulum sagittis. Proin efficitur interdum faucibus.
+                  Suspendisse
+                  accumsan nibh
+                  vitae nulla imperdiet venenatis. Praesent semper ipsum nunc, id cursus sem
+                  consectetur
+                  et.
+                  Proin ante leo,
+                  varius malesuada euismod ac, eleifend vel felis. Proin porttitor felis sed nisi
+                  rutrum
+                  faucibus. Phasellus
+                  et gravida quam. Vivamus vitae eleifend nisi. Sed non feugiat ipsum.
+                </div>
+              </div>
+
+              <a href="#" class="btn btn--ecology-section">Bliv klog på økologi</a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <div id="trigger5" class="spacer s5"></div>
+    <section class="market-section">
+
+      <div class="market-section__container">
+        <div class="market-section__img" id="market-img">
+          <img src="images/market.png" alt="Img 1">
+        </div>
+      </div>
+
+      <div class="overlay-description market-text"></div>
+      <div class="market-section__text market-text" id="market-text">
+        <div class="text-content">
+
+          <div class="date-block">
+            <div class="date-block__content">
+              <span>1.-2.</span>
+              <span>September</span>
+            </div>
+          </div>
+
+          <h2 class="section-title">
+            Økologisk Høstmarked
+          </h2>
+
+          <div class="description-content">
+            <div class="description-text">
+              <p>Hvem vil ikke gerne mærke hestens bløde mule, trække økologiske gulerødder op af jorden,
+                plukke
+                æbler eller
+                følge landmanden på markvandring?</p>
+
+              <p>Til Økologisk Høstmarked er det tilladt at se, røre, lugte og smage på økologien og hilse
+                på
+                de
+                økologiske
+                landmænd: Tag en snak om stort og småt, for hos os er der ingen hellige køer. Sidste år
+                trak
+                63.000 danskere
+                i gummistøvlerne og drog på landet en sensommerdag, hvor landskabet stod malet i gyldne
+                farver
+                og træerne
+                bugnede af modne frugter og bær.</p>
+
+              <p>Vi glæder os til at se dig!</p>
+
+            </div>
+
+            <ul class="marker-zone">
+              <li class="marker-zone__item"><i class="icon icon-mark"></i>80 gårde i hele landet</li>
+              <li class="marker-zone__item"><i class="icon icon-date"></i>2. september – 3. september</li>
+              <li class="marker-zone__item"><i class="icon icon-clock"></i>Klokken 10:00 - 17:00</li>
+              <li class="marker-zone__item"><i class="icon icon-people"></i>592</li>
+            </ul>
+          </div>
+
+          <a href="#" class="btn btn--market-section">Deltag på facebook</a>
+        </div>
+      </div>
+
+    </section>
+
+    <div id="trigger6" class="spacer s6"></div>
+    <footer class="contact-section">
+      <!-- tot top -->
+      <div class="arrow-btn-up" id="btn-up" style="opacity: 1; visibility: visible;">
+          <svg version="1.1" id="Lag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64.8 133.4" style="enable-background:new 0 0 64.8 133.4;" xml:space="preserve">
+          <style type="text/css">
+                      .st0 {
+                          fill: #FFFFFF;
+                      }
+          </style>
+          <polygon class="st0" points="0,32.7 0,0 64.8,65.9 0,133.4 0,99.6 32.9,66.1 "></polygon>
+      </svg>
+      </div>
+
+
+
+      <div class="contact-section__container flex-container flex-container--align-start flex-container--jastify-between">
+          <div class="contact-section__text" id="contact-text" style="opacity: 1;">
+              <h2 class="section-title">
+                  Kontakt os
+              </h2>
+              <div class="description-content">
+                  <h4 class="section-sub-title">
+                      Spørgsmål til de økologiske høstmarkeder
+                  </h4>
+                          <div class="contact-item">
+                              <div class="contact-item__country">
+                                  <text>Birgitte Nygaard, Projektleder</text>
+                              </div>
+                                  <a href="tel:+4530328733" class="contact-item__tel">+45 30 32 87 33</a>
+                                                              <a href="mailto:bny@okologi.dk" class="contact-item__email">bny@okologi.dk</a>
+                          </div>
+                          <div class="contact-item">
+                              <div class="contact-item__country">
+                                  <text>Louise Krageskov, Projektmedarbejder</text>
+                              </div>
+                                  <a href="tel:+4530328733" class="contact-item__tel">+45 30 32 87 33</a>
+                                                              <a href="mailto:ikk@okologi.dk" class="contact-item__email">ikk@okologi.dk</a>
+                          </div>
+                          <div class="contact-item">
+                              <div class="contact-item__country">
+                                  <text>Sofie Andersen, Projektmedarbejder</text>
+                              </div>
+                                  <a href="tel:+4561974914" class="contact-item__tel">+45 61 97 49 14</a>
+                                                              <a href="mailto:sna@okologi.dk" class="contact-item__email">sna@okologi.dk</a>
+                          </div>
+
+              </div>
+          </div>
+
+          <div class="contact-section__img">
+              <div class="section-img-l-board" id="contact-img-bord-left" style="transform: matrix(0, 0, 0, 1, 0, 0);"></div>
+              <div class="section-img-r-board" id="contact-img-bord-right" style="transform: matrix(0, 0, 0, 1, 0, 0);"></div>
+              <div class="section-img-t-board" id="contact-img-bord-top" style="transform: matrix(1, 0, 0, 0, 0, 0);"></div>
+
+                      <img src="http://hm.dynamikfabrikken.com/media/1033/contact.png" alt="">
+
+
+
+              <div class="overlay-description contact-img-text" style="transform: translate3d(0px, 37.6677px, 0px);"></div>
+              <div class="contact-img-text" id="contact-img-text" style="transform: translate3d(0px, 37.6677px, 0px);">
+                  <h2 class="section-title">
+                      Presse
+                  </h2>
+                  <div class="contact-img-text-content">
+                              <div class="press-wrp">
+                                  <div class="press-wrp__title">
+                                      Pressekontakt
+                                  </div>
+                                  <div class="name">
+                                      <text>
+                                          Line Skovboe                                    </text>
+                                  </div>
+                                      <a href="tel:+4524426952" class="tel">+45 24 42 69 52</a>
+                                                                      <a href="mailto:lsk@okologi.dk" class="press-email">lsk@okologi.dk</a>
+                              </div>
+                              <div class="press-wrp">
+                                  <div class="press-wrp__title">
+                                      Birgitte Nygaard
+                                  </div>
+                                  <div class="name">
+                                      <text>
+                                          Birgitte Nygaard                                    </text>
+                                  </div>
+                                      <a href="tel:+4530328733" class="tel">+45 30 32 87 33</a>
+                                                                      <a href="mailto:bny@okologi.dk" class="press-email">bny@okologi.dk</a>
+                              </div>
+
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </footer>
+
+    <!--
+    <section class="other-section js-farmsNear" data-latitude="54.871317" data-longitude="9.737630999999965">
+      <div class="other-section__container">
+        <div class="other-section__text">
+          <h2 class="section-title">
+            Andre værter tæt på
+          </h2>
+        </div>
+        <div class="other-box">
+        </div>
+      </div>
+    </section>
+  -->
+    @@include('_include/footer.html')
+    @@include('_include/extra-footer.html')
+    @@include('_include/inc_script.html')
+  </div>
+</div>
+
+
+
+@@include('_include/map.html')
+<script src="ts/tsCompiled.js"></script>
+
+</body>
+</html>

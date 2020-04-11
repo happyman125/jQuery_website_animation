@@ -1,0 +1,373 @@
+#tadaoverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 890;
+}
+
+.intro {
+  position: static;
+  height: 100vh;
+  margin-bottom: 40px;
+
+  @include max-w($screen-xxxl) {
+   /* padding-bottom: 1000px;*/
+  }
+
+  @include max-w($screen-sm-start) {
+   /* padding-bottom: 1350px;*/
+  }
+
+  &__banner {
+    padding: 30px;
+
+    @include max-w($screen-sm-start) {
+      padding: 0;
+    }
+  }
+
+  #tada {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: translate(0%, 0%);
+    background: #fff;
+  }
+
+  &__bg {
+    position: relative;
+    height: 65vh;
+    background-image: url('../images/bliv-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &--top {
+      background-image: url('../images/top-bg.png');
+    }
+
+    &--godt {
+      background-image: url('../images/godt-bg.png');
+    }
+
+    &--tool {
+      background-image: url('../images/tool-bg.png');
+    }
+
+    .section-img-l-board,
+    .section-img-r-board,
+    .section-img-t-board,
+    .section-img-b-board {
+      transform: scale(0);
+    }
+  }
+
+  &__text {
+    max-width: 1024px;
+    //background-color: rgba(72, 77, 67, 0.8);
+    color: $main-color;
+    text-align: center;
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 80px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    word-wrap: break-word;
+
+    @include max-w($screen-sm-start) {
+      max-width: 708px;
+      top: 28%;
+    }
+
+    @include max-w($screen-sm) {
+      top: 40%;
+    }
+
+    &--top {
+      padding-bottom: 40px;
+    }
+
+    &--godt {
+     // background-color: rgba(119, 144, 39, 0.8);
+      padding-bottom: 60px;
+    }
+
+    &--tool {
+      //background-color: rgba(162, 116, 43, 0.8);
+
+      .section-title {
+
+        span {
+          display: block;
+          padding-left: 55px;
+        }
+      }
+    }
+
+    .section-title {
+      margin-bottom: 15px;
+
+      @include max-w($screen-sm-start){
+        font-size: 38px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .section-sub-title {
+      font-size: 20px;
+      line-height: 25px;
+      max-width: 840px;
+      margin: 0 auto 110px;
+
+      @include max-w($screen-sm-start){
+        font-size: 16px;
+      }
+
+      &--sm-width {
+        max-width: 780px;
+        margin-bottom: 40px;
+      }
+
+      &--godt {
+        max-width: 780px;
+        margin-bottom: 120px;
+      }
+    }
+
+    .title-info-content {
+      font-size: 20px;
+      line-height: 25px;
+      color: #a1ac96;
+      font-family: $bold-font;
+      margin-bottom: 50px;
+    }
+  }
+
+  .top-overlay {
+    background-color: rgba(119, 144, 39, 1);
+    max-width: 1024px;
+    padding-bottom: 60px;
+    mix-blend-mode: multiply;
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 563px;
+
+    @include max-w($screen-sm-start) {
+      height: 1013px;
+      top: 28%;
+    }
+
+    @include max-w($screen-sm) {
+      height: 1062px;
+      top: 15%;
+    }
+
+    @include max-w($screen-xs) {
+      height: 1182px;
+    }
+  }
+
+  .godt-overlay {
+    background-color: rgba(119, 144, 39, 1);
+    max-width: 1024px;
+    padding-bottom: 60px;
+    mix-blend-mode: multiply;
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 563px;
+
+    @include max-w($screen-sm) {
+      top: 40%;
+      height: 1117px;
+    }
+
+    @include max-w($screen-375){
+      height: 1200px;
+    }
+  }
+
+  .tool-overlay {
+    background-color: rgba(162, 116, 43, 1);
+    max-width: 1024px;
+    padding-bottom: 60px;
+    mix-blend-mode: multiply;
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 563px;
+
+    @include max-w($screen-sm-start){
+      top: 40%;
+      height: 706px;
+    }
+
+    @include max-w($screen-sm){
+      height: 776px;
+      top: 40%;
+    }
+
+    @include max-w($screen-xs) {
+      height: 873px;
+    }
+  }
+
+  .overlay-intro-text {
+    max-width: 1024px;
+    background-color:#737d69;/* rgba(72, 77, 67, 1);*/
+    mix-blend-mode: multiply;
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 80px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 621px;
+
+    @include max-w($screen-sm-start) {
+      max-width: 708px;
+      top: 28%;
+    }
+
+    @include max-w($screen-sm) {
+      top: 40%;
+      height: 951px;
+    }
+
+    @include max-w($screen-375) {
+      height: 1026px;
+    }
+  }
+
+  .btn-intro-wrp {
+    margin-bottom: 50px;
+  }
+}
+
+.intro-content {
+  max-width: 670px;
+  margin: 0 auto;
+  color: #a1ac96;
+
+  @include max-w($screen-sm-start) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &--lg-width {
+    max-width: 845px;
+    color: $main-color;
+
+    @include max-w($screen-sm-start) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &--xs-width {
+    max-width: 570px;
+    color: $main-color;
+  }
+
+  &__item {
+    max-width: 205px;
+
+    @include max-w($screen-sm-start) {
+      margin-bottom: 25px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    &--tool {
+      max-width: 245px;
+    }
+  }
+
+  &__position {
+    margin-bottom: 25px;
+  }
+
+  &__email {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__phone {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a {
+    display: block;
+    /*color: #a1ac96;*/
+  }
+
+  .icon-wrp {
+    height: 65px;
+
+    &--godt {
+      min-height: 95px;
+      margin-bottom: 25px;
+    }
+  }
+
+  svg {
+    width: 45px;
+    height: 45px;
+  }
+
+  svg .cls-1 {
+    fill: #fff;
+  }
+
+  .content-title {
+    font-family: $bold-font;
+    font-size: 27px;
+    margin-bottom: 15px;
+  }
+
+  .content-text {
+    font-size: 14px;
+
+    .contact-data {
+      margin-top: 30px;
+    }
+  }
+
+  .site-link {
+    color: #1C1F19;
+    font-family: $bold-font;
+    font-size: 16px;
+    text-decoration: underline;
+  }
+
+}
+

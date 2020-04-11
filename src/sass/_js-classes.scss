@@ -1,0 +1,28 @@
+// Blocked scroll all page
+.blocked{
+  overflow: hidden;
+}
+
+
+// Classes for menu
+.icon-closes{
+  .icon-menu{
+
+    &:nth-of-type(2){
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &:first-of-type{
+      transform: rotate(45deg) translate(5px, 10px);
+    }
+
+    &:last-of-type{
+      transform: rotate(-45deg)translateY(-5px);
+    }
+  }
+}
+
+.trans-bg{
+  background: transparent;
+}

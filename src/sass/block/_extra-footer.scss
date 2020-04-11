@@ -1,0 +1,47 @@
+.extra-footer{
+  padding: 0 50px 50px;
+
+  @include max-w($screen-lg){
+    padding: 0 20px 20px;
+  }
+
+  @include max-w($screen-sm){
+    margin-top: 240px;
+  }
+
+  &__inner{
+    background: $ecology-section-color;
+    padding: 70px 0 60px;
+  }
+
+
+  &__content{
+    max-width: 980px;
+    margin: 0 auto;
+    font-family: 'News Gothic Condensed Bold', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 20px;
+    padding: 0 40px;
+    box-sizing: border-box;
+    text-align: center;
+
+    p{
+
+    }
+  }
+
+  &__figure{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    img{
+      max-width: 100%;
+      vertical-align: top;
+    }
+  }
+
+}

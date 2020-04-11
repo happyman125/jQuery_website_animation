@@ -1,0 +1,33 @@
+.slider-control{
+  width: 215px;
+  height: 118px;
+  background-color: $main-color;
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: scaleX(0);
+  transform-origin: left;
+
+  @include max-w($screen-lg){
+    transform: scale(1);
+    width: 180px;
+    height: 90px;
+  }
+
+  @include max-w($screen-sm){
+    width: 160px;
+    height: 60px;
+  }
+
+  >button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: 0 none;
+  }
+}

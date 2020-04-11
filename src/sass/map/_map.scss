@@ -1,0 +1,514 @@
+@import "./_mixins";
+@import "./input";
+@import "./icon";
+@import "./slider";
+@import "./farm";
+@import "./utilities";
+@import "./infobox";
+@import "./variables";
+
+.MapSection {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    will-change: transform;
+    transform: translate3d(100%, 0, 0);
+    transition: transform 0.6s;
+    transition-timing-function: cubic-bezier(.83, .67);
+
+    &.show {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+
+    &.is-active {
+        height: calc(100% - 70px);
+    }
+
+    @include respond-above('tablet') {
+        &.is-active {
+            //height: calc(100% - 260px);
+        }
+    }
+
+    @include respond-above('desktop') {
+        &.is-active {
+            //height: calc(100% - 310px);
+        }
+    }
+}
+
+.mapcheck {
+    display: none;
+    &:checked ~ footer,
+    &:checked ~ #canvas-wrapper {
+        transform: translate3d(-100%, 0, 0);
+
+        main {
+            width: 100%;
+            right: 0;
+        }
+    }
+
+    &:checked ~ .MapSection {
+        transform: translate3d(0, 0, 0);
+    }
+
+    &:checked ~ #showMap {
+        transform: translate3d(100px, 0, 0) !important;
+    }
+}
+
+.MapSection-farms {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    width: 100%;
+    background: getcolor(white);
+    z-index: 13;
+    height: 400px;
+    transform: translate3d(0, 330px, 0);
+    transition: transform 0.4s;
+
+    @include respond-above('tablet') {
+        height: 340px;
+        padding-bottom: 0;
+        align-items: center;
+        transform: translate3d(0, 270px, 0);
+    }
+
+    &.is-open {
+        transform: translate3d(0, 0, 0);
+
+        @include respond-above('tablet') {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    @include respond-above('desktop-large') {
+        transform: none;
+    }
+
+    &.is-active {
+        opacity: 1;
+    }
+}
+
+.chk-container {
+    width: 100%;
+}
+
+
+.MapSection-filters {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 400px;
+    padding: 20px 0 90px 0;
+    background: $darkGreen;
+    z-index: 12;
+    transform: translate3d(0, 330px, 0);
+    transition: transform 0.4s;
+    transition-timing-function: cubic-bezier(.83, .67);
+
+
+    @include respond-above('tablet') {
+        flex-direction: row;
+        height: 150px;
+        transform: translate3d(0, 140px, 0);
+
+        bottom: 60px;
+        padding: 10px 0;
+
+        &.is-open {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    @include respond-above('desktop-large') {
+        height: 145px;
+        bottom: 340px;
+        transform: translate3d(0, 150px, 0);
+    }
+
+    &.is-active {
+        display: flex;
+    }
+
+    &.is-open {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.MapSection-filters-toggle {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    padding: 25px 0 0 0;
+    width: 380px;
+    height: 50px;
+    text-align: center;
+    transform: translateX(-50%);
+    color: getcolor(white);
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:before {
+        content: " ";
+        display: block;
+        width: 0;
+        height: 0;
+        left: calc(50% + 78px);
+        top: -50px;
+        position: absolute;
+        border-top: 120px solid transparent;
+        border-bottom: 120px solid transparent;
+        border-right: 84px solid $darkGreen;
+        transform: rotate(90deg) translateY(50%) translateX(-50%);
+        z-index: -1;
+    }
+
+    &:after {
+        content: " ";
+        background: url(/images/dropdownArrow.png) top left no-repeat;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        left: 50%;
+        top: 6px;
+        margin-left: -10px;
+        pointer-events: none;
+        z-index: 2;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        background-size: 100%;
+        margin-top: -8px;
+
+        .is-open & {
+            transform: rotate(0deg);
+            top: 12px;
+        }
+
+        @include respond-above('tablet') {
+            top: 12px;
+
+            .is-open & {
+                top: 16px;
+            }
+        }
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+        //background-image: url('/images/filter-top@2x.png');
+    }
+
+    @include respond-above('tablet') {
+        top: -69px;
+        width: 532px;
+        height: 70px;
+        padding: 35px 0 0 0;
+        background-size: 532px 70px;
+    }
+
+    p {
+        font-size: 11px;
+        font-weight: 900;
+
+        @include respond-above('tablet') {
+            font-size: 15px;
+        }
+    }
+}
+
+.MapSection-toggle-filters {
+    display: none;
+
+    /*
+    &:checked ~ .MapSection-filters {
+      @include respond-above('tablet') {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    &:checked ~ .MapSection-farms {
+      transform: translate3d(0, 75%, 0);
+
+      @include respond-above('tablet') {
+        transform: translate3d(0, 0, 0);
+      }
+    }*/
+}
+
+// Zoom controls
+.gmnoprint.gm-bundled-control {
+    display: none;
+
+    @include respond-above('tablet') {
+        display: block;
+    }
+}
+
+.MapSection-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $darkGreen;
+    opacity: .8;
+    z-index: 10;
+}
+
+.MapSection-search {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    max-width: calc(100% - 40px);
+    transform: translate(-50%, -50%);
+    z-index: 11;
+
+    h2 {
+        text-align: center;
+        color: getcolor(white);
+        margin-bottom: 30px;
+
+      @include respond-below('tablet') {
+          display: none;
+      }
+    }
+
+    @include respond-below('tablet') {
+        top:0 !important;
+        right: 0 !important;
+        width: 100%;
+        left: 60px;
+        margin: auto;
+        max-width: calc(100% - 60px);
+        transform: translate(0, 0);
+    }
+
+    &.is-searched {
+        top: 20px;
+        left: auto;
+        right: 30px;
+        transform: none;
+        width: calc(100% - 60px);
+
+        @include respond-above('tablet') {
+            width: 300px;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        h2 {
+            display: none;
+        }
+    }
+}
+
+
+
+.MapSection-search-controls-wrapper {
+    position: relative;
+    width: 100%;
+
+    .InputButton {
+        border-radius: 0;
+        top: 7px;
+        bottom: 0;
+        right: 0;
+        transform: none;
+        background-color: $darkGreen;
+        height: 72px;
+        width: 72px;
+        @include respond-below('tablet') {
+            height: 60px !important;
+            top: 0 !important;
+         }
+    }
+
+
+    button {
+        right: 15px;
+
+        .is-searched & {
+            right: 10px;
+        }
+    }
+
+    @include respond-below('tablet') {
+        height: 60px !important;
+        margin-top: 0 !important;
+     }
+}
+
+.MapSection-search-controls {
+    border: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+    font-size: 16px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    outline: none;
+    background-color: getcolor(white);
+    padding: 0 50px 0 30px;
+
+    .is-searched & {
+        height: 55px;
+        padding: 0 60px 0 20px;
+    }
+
+    @include respond-below('tablet') {
+        height: 60px !important;
+        margin-top: 0 !important;
+     }
+}
+
+.MapSection-search.is-searched .InputButton {
+    top: 8px;
+    height: 55px;
+    width: 55px;
+}
+
+input[type="text"].MapSection-search-controls {
+    color: $darkGreen2;
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $darkGreen2;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+        color: $darkGreen2;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+        color: $darkGreen2;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+        color: $darkGreen2;
+    }
+}
+
+.dropdown-with-icon {
+    position: relative;
+
+    > svg {
+        position: absolute;
+        z-index: 2;
+        top: 10px;
+        left: 10px;
+        height: 24px;
+        fill: $greenLayter;
+    }
+
+    .choices {
+        margin: 0;
+    }
+
+    .choices__inner {
+        padding-left: 34px;
+    }
+}
+
+.map_checkbox_icon {
+    width: 4rem;
+    height: 4rem;
+    min-width: 4rem;
+
+    rect {
+        fill: none;
+        stroke-width: 1.5rem;
+    }
+
+    path {
+        fill: none;
+        stroke-width: 2.5rem;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 100;
+        stroke-dashoffset: 105;
+        transition: stroke-dashoffset .2s ease-in-out;
+
+        &.checked {
+            stroke-dashoffset: 0;
+        }
+    }
+}
+
+.check-container{
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    right: 0;
+    top: 10px;
+
+    @media only screen and (max-width: 1075px){
+      top: 3px;
+    }
+
+    input{
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 50%;
+        left: -5px;
+        height: 22px;
+        width: 22px;
+        background-color: #fff;
+        transform: translateX(-50%);
+
+        &:after {
+            content: " ";
+            position: absolute;
+            display: none;
+        }
+    }
+}
+
+
+.check-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.check-container .checkmark:after {
+   width: 13px;
+    height: 13px;
+    background-color: #779027;
+    transform: translate(33%,36%);
+}

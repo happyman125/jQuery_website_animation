@@ -1,0 +1,69 @@
+//  Include fonts
+// font-family: 'Archer Book';
+@font-face {
+  font-family: 'Archer Book';
+  font-weight: normal;
+  src: local('Archer Book'), local('Archer Book');
+  src: url('../fonts/Archer Book.eot');
+  src: url('../fonts/Archer Book.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Archer Book.woff') format('woff'),
+  url('../fonts/Archer Book.ttf') format('truetype'),
+  url('../fonts/Archer Book.svg#Archer Book') format('svg');
+}
+
+// font-family: 'NewsGoth BT Roman';
+@font-face {
+  font-family: 'NewsGoth BT Roman';
+  font-weight: normal;
+  src: local('NewsGoth BT Roman'), local('NewsGoth BT Roman');
+  src: url('../fonts/NewsGoth BT Roman.eot');
+  src: url('../fonts/NewsGoth BT Roman.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/NewsGoth BT Roman.woff') format('woff'),
+  url('../fonts/NewsGoth BT Roman.ttf') format('truetype'),
+  url('../fonts/NewsGoth BT Roman.svg#NewsGoth BT Roman') format('svg');
+}
+
+// font-family: 'News Gothic Condensed Bold';
+// font-weight: 700
+@font-face {
+  font-family: 'News Gothic Condensed Bold';
+  font-weight: normal;
+  src: local('News Gothic Condensed Bold'), local('News Gothic Condensed Bold');
+  src: url('../fonts/News Gothic Condensed Bold.eot');
+  src: url('../fonts/News Gothic Condensed Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/News Gothic Condensed Bold.woff') format('woff'),
+  url('../fonts/News Gothic Condensed Bold.ttf') format('truetype'),
+  url('../fonts/News Gothic Condensed Bold.svg#News Gothic Condensed Bold') format('svg');
+}
+
+// Title
+
+h1, h2, h3, h4, h5 {
+  font-family: $title-font;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+p a, p a:hover, p a:active, p a:visited {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: 700;
+}

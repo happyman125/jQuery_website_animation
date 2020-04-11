@@ -1,0 +1,218 @@
+@import "elements";
+@import "mixins";
+
+[class^="Icon"] {
+    fill: getcolor(dark-blue);
+    [class*="--green"] & {
+        fill: getcolor(dark-green);
+    }
+    [class*="--blue"] & {
+        fill: getcolor(dark-blue);
+    }
+    height: 28px;
+}
+
+.Icon-bicycle {
+    width: 44px;
+
+    .Checkbox-input & {
+        width: 33px;
+        height: 21px;
+    }
+}
+
+.Icon-facebook {
+    width: 81px;
+    height: 50px;
+    fill: getcolor(white);
+}
+
+.Icon-instagram {
+    width: 93px;
+    height: 50px;
+    fill: getcolor(white);
+}
+
+.Icon-pinSimple {
+    width: 14px;
+    height: 14px;
+}
+
+.Icon-clock {
+    width: 14px;
+    height: 14px;
+}
+
+.Icon-suitcase {
+    width: 32px;
+    height: 67px;
+}
+
+.Icon-tractor {
+    width: 47px;
+    height: 36px;
+}
+
+.Icon-hands {
+    width: 50px;
+    height: 49px;
+}
+
+.Icon-watch {
+    width: 35px;
+    height: 60px;
+    fill-rule: evenodd;
+}
+
+.Icon-people {
+    width: 14px;
+    height: 13px;
+}
+
+.Icon-calendar {
+    width: 13px;
+    height: 14px;
+}
+
+.Icon-cutlery {
+    width: 21px;
+
+    .Checkbox-input & {
+        width: 16px;
+        height: 21px;
+    }
+}
+
+.Icon-magnifying {
+    width: 16px;
+    height: 16px;
+    fill: getcolor(white);
+}
+
+.Icon-map {
+    width: 35px;
+    height: 35px;
+}
+
+.Icon-hamburger {
+    width: 21px;
+    height: 18px;
+}
+
+.Icon-close {
+    width: 19px;
+    height: 19px;
+}
+
+.Icon-quote {
+    width: 59px;
+    height: 51px;
+}
+
+.Icon-restricted {
+    width: 100px;
+    height: auto;
+    margin: 0 auto;
+
+    @include respond-above('tablet') {
+        width: 118px;
+    }
+}
+
+.Icon-pdf {
+    width: 33px;
+    height: 38px;
+}
+
+.Icon-cow {
+    width: 61px;
+    height: 41px;
+}
+
+.Icon-shirt {
+    width: 51px;
+    height: 48px;
+}
+
+.Icon-sign {
+    width: 99px;
+    height: 119px;
+}
+
+.Icon-cowDancing {
+    width: 100px;
+    height: 110px;
+    margin: 0 auto;
+    margin-bottom: -25px;
+    margin-top: -35px;
+}
+
+.Icon-logoMenu {
+    width: 183px;
+    height: 158px;
+    fill: getcolor(dark-blue);
+
+    .NavSection & {
+        width: 90px;
+        height: 72px;
+
+        @include respond-above('phone') {
+            width: 183px;
+            height: 158px;
+        }
+    }
+}
+
+.Icon-logoOkodag {
+    width: 100%;
+    height: auto;
+    fill: getcolor(white) !important;
+
+    @include respond-above('phone') {
+        width: 234px;
+        height: 273px;
+    }
+}
+
+.Icon-disabled {
+    width: 27px;
+    height: 27px;
+
+    .Checkbox-input & {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+.Icon-dairy {
+    width: auto;
+    display: inline-block;
+
+    &.thise {
+        height: 20px;
+        padding-bottom: 5px;
+    }
+
+    &.ollingegaard {
+        height: 24px;
+        padding-bottom: 5px;
+    }
+}
+
+.Icon-boots {
+    width: 47px;
+    height: 47px;
+}
+
+.Icon-checkmark {
+    width: 9px;
+    height: 9px;
+    fill: getcolor(dark-blue);
+
+    .Activities &,
+    .Facts & {
+        width: 14px;
+        height: 14px;
+        fill: getcolor(white);
+    }
+}

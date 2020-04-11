@@ -1,0 +1,147 @@
+.page-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 901;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-slide-line {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.scroll-slide-line {
+    width: 0;
+    color:$info-small-text-color;
+    font-family: "Archer Book", serif;
+    font-size: 20px;
+    background-color: $main-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+        display: none;
+        opacity: 0;
+
+        .desktoptext {
+            @include max-w($screen-sm){
+                display:none;
+            }
+        }
+        .mobiletext {
+            @include min-w($screen-sm){
+                display:none;
+            }
+        }
+    }
+}
+
+.menu-btn-wrap,
+.map-btn-wrp {
+    background: $main-color;
+    width: 91px;
+    height: 91px;
+    display: flex;
+    //flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transform: scale(0);
+    transform-origin: left top;
+    transition: transform 0.5s;
+    outline: 0 none;
+    border: 0 none;
+
+    @include max-w($screen-sm) {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.map-btn-wrp {
+    transform-origin: right top;
+}
+
+.map-btn-wrp .icon-map-icon {
+    opacity: 0;
+    background-image: url("../images/dk_kort.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 41px;
+    background-size: cover;
+}
+
+.icon-menu {
+    width: 22px;
+    height: 2px;
+    display: block;
+    background-color: $icon-menu;
+    margin-bottom: 5px;
+    transition: transform 0.3s;
+    opacity: 0;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &-wrapper{
+      display: block;
+      margin: 0 auto;
+      width: 22px;
+    }
+}
+
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10001;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.popuo-overlay {
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.popup-content{
+    text-align: center;
+    position: relative;
+    max-width: 560px;
+    background-color: #fff;
+    z-index: 1001;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    p{
+        margin-bottom: 30px;
+    }
+}
+
+//Android/Iphone 1px gap fix
+@media only screen and (max-width: 768px) {
+  .scroll-slide-line {
+    margin: 0 -10px;
+  }
+}

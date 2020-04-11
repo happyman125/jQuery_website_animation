@@ -1,0 +1,24 @@
+body {
+  &:before {
+    position: fixed;
+    z-index: 100;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    line-height: 50px;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    text-align: center;
+    content: 'xs';
+
+    @each $breakpoint, $size in $breakpoints {
+      @media (min-width: em($size)) {
+        content: '#{$breakpoint} - #{$size}';
+      }
+    }
+  }
+
+  *[class*='col-']:hover {
+    background: lightblue;
+  }
+}

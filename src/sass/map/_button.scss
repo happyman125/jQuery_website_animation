@@ -1,0 +1,258 @@
+@keyframes moveNavButton {
+    from {
+        transform: translate3d(-100px, 0, 0);
+    }
+    to {
+        transform: translate3d(20px, 0, 0);
+    }
+}
+
+@keyframes moveMapButton {
+    from {
+        transform: translate3d(100px, -100px, 0);
+    }
+    to {
+        transform: translate3d(-20px, 0, 0);
+    }
+}
+
+@keyframes moveMapButtonText {
+    0% {
+        width: 0px;
+        opacity: 0;
+    }
+    /* 0ms initial values */
+    15% {
+        width: 100px;
+        opacity: 1;
+    }
+    /* 150ms half of animation */
+    50% {
+        width: 100px;
+        opacity: 1;
+    }
+    /* 2150ms still at half of animation */
+    70% {
+        width: 0px;
+        opacity: 0;
+    }
+    /* 2300ms back to initial */
+    100% {
+        width: 0px;
+        opacity: 0;
+    }
+    /* 6300ms still at initial */
+}
+
+.Button {
+    -webkit-appearance: none;
+    background-color: getcolor(dark-blue);
+    border-color: transparent;
+    border-radius: $btn-border-radius;
+    border-style: solid;
+    border-width: 0px;
+    box-sizing: border-box;
+    color: getcolor(white);
+    cursor: pointer;
+    display: inline-block;
+    font: inherit;
+    font-weight: 700;
+    line-height: 50px;
+    margin: 0;
+    padding: 0 2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    white-space: normal;
+    transition: all .5s;
+
+    &:hover {
+        background-color: darken(getcolor(dark-blue), 5%);
+        border-radius: 0;
+    }
+
+    [class*="--green"] & {
+        background-color: getcolor(dark-green);
+
+        &:hover {
+            background-color: darken(getcolor(dark-green), 5%);
+        }
+    }
+
+    [class*="--blue"] & {
+        background-color: getcolor(dark-blue);
+
+        &:hover {
+            background-color: darken(getcolor(dark-blue), 5%);
+        }
+    }
+
+    .Grid-item-content-wrapper & {
+        margin: 0 5px;
+    }
+
+    .infoBox & {
+        background-color: #24697b;
+    }
+
+    .SubNav & {
+        background: transparent;
+        border-width: 3px;
+        border-radius: $btn-border-radius + 5px;
+        border-color: getcolor(blue);
+        color: getcolor(blue);
+        font-size: 13px;
+        width: auto;
+    }
+
+    .Media &,
+    .infoBox & {
+        line-height: 35px;
+    }
+
+    * {
+        color: getcolor(white);
+    }
+}
+
+.Button--icon {
+    line-height: 0;
+}
+
+.Button--green {
+    background-color: getcolor(dark-green);
+}
+
+.Button--blue {
+    background-color: getcolor(dark-blue);
+}
+
+#showMap {
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
+    //position: absolute;
+    //right: 0px;
+    //transform: translate3d(100px, -100px, 0);
+    //animation: moveMapButton .5s;
+    //transition-timing-function: cubic-bezier(.83, .67);
+    //animation-delay: 1.5s;
+    //animation-fill-mode: forwards;
+}
+
+#closeMap {
+    position: absolute;
+    border-radius: 0;
+    left: 0;
+    top: 0;
+    padding: 6px 0 0 6px;
+
+    > span {
+        width: 22px;
+        height: 2px;
+        display: inline-block;
+        background-color: #4a591a;
+        transition: transform 0.3s;
+        opacity: 0;
+
+        &:first-of-type {
+            transform: rotate(45deg) translate(5px, -5px);
+        }
+
+        &:last-of-type {
+            transform: rotate(-45deg) translate(-9px, -12px);
+        }
+    }
+}
+
+.showMapText {
+    position: absolute;
+    top: 0;
+    line-height: 60px;
+    right: 70px;
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    display: block;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
+
+    animation-name: moveMapButtonText;
+    animation-duration: 4s;
+    transition-timing-function: cubic-bezier(.83, .67);
+    animation-delay: 1.3s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+}
+
+#showNav {
+    position: absolute;
+    left: 0px;
+    transform: translate3d(-100px, 0, 0);
+    will-change: transform;
+    animation: moveNavButton .5s;
+    transition-timing-function: cubic-bezier(.83, .67);
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+
+    .Icon-close {
+        display: none;
+    }
+}
+
+#closeNav {
+    position: absolute;
+    left: 20px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+
+    @include respond-above('tablet') {
+        display: none;
+    }
+}
+
+.UtilButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    width: 60px;
+    height: 60px;
+    background: white;
+    z-index: 11;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translate3d(0, 0, 0);
+}
+
+.InputButton {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate3d(0, -50%, 0);
+    -webkit-appearance: none;
+    background-color: getcolor(dark-blue);
+    border-color: transparent;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0px;
+    box-sizing: border-box;
+    color: getcolor(white);
+    display: inline-block;
+    font: inherit;
+    font-weight: 700;
+    line-height: 50px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    white-space: normal;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

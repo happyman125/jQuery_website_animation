@@ -1,0 +1,153 @@
+@import "_variables";
+
+@-webkit-keyframes FadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.js-farmsNear {
+
+    .column {
+        animation: FadeIn 1s linear;
+        animation-fill-mode: both;
+
+        &:nth-child(1) {
+            display: none;
+        }
+        &:nth-child(2) {
+            animation-delay: .2s
+        }
+        &:nth-child(3) {
+            animation-delay: .4s
+        }
+        &:nth-child(4) {
+            display: none;
+            animation-delay: .6s;
+
+            @include respond-above('desktop-large') {
+                display: flex;
+            }
+        }
+    }
+}
+
+.Farm {
+    text-align: center;
+
+    .Slider & {
+        color: $darkGreen;
+    }
+    p {
+        font-size: 13px;
+    }
+
+    > p {
+        color: $darkGreen;
+    }
+
+    > .Button {
+        border-radius: 0;
+        background-color: $darkGreen;
+        border: 1px solid $darkGreen;
+        line-height: 50px;
+        font-family: "News Gothic Condensed Bold",sans-serif;
+        font-size: 16px;
+
+        &:hover {
+            border: 1px solid $darkGreen;
+            background: white;
+            color: $darkGreen;
+        }
+    }
+}
+
+.Farm-header {
+    font-weight: 600;
+    color: $darkGreen;
+
+    .u-subheadline {
+        font-family: "Archer Book", serif;
+        font-size: 20px;
+        margin: 0 auto;
+        line-height: 1.1;
+        width: 200px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+        .Slider & {
+            width: 100%;
+        }
+    }
+    .u-subheadline.subsubheadline {
+        text-transform: capitalize;
+        color: $rust;
+    }
+    p {
+        font-family: "News Gothic Condensed Bold", sans-serif;
+        font-size: 18px;
+        margin-bottom: 5px;
+        color: $darkGreen;
+        line-height: 1.2;
+    }
+    p.Farm-owner {
+        color: $darkGreen;
+    }
+}
+
+.Farm-details {
+    &.Grid-item-columns {
+        flex-direction: column;
+        margin: 1em 0 1em 0;
+
+        .column {
+            flex: 1 0 auto;
+            margin: 0 0 1em 0;
+        }
+
+        @include respond-above('tablet') {
+            flex-direction: row;
+
+            .column {
+                margin: 0 0 0 0;
+            }
+        }
+    }
+
+    .Details strong,
+    .Details span, {
+        display: block;
+    }
+}
+
+.Farm-owner {
+    width: 200px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+    .Slider & {
+        width: 100%;
+    }
+}
+
+.Farm-size {
+    display: none;
+
+    @include respond-above('tablet') {
+        display: block;
+    }
+}
+
+.Farm-facilities {
+    margin: 15px 0;
+    min-height: 32px;
+
+    [class^="Icon"] {
+        margin: 0 5px;
+    }
+}

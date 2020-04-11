@@ -1,0 +1,367 @@
+/* form styling */
+
+.out-side-div {
+    position: relative;
+}
+
+.blivet-section .text-box h1 {
+    text-align: left;
+    font-size: 40px;
+    line-height: 45px;
+    color: #737d69;
+    margin-bottom: 20px;
+}
+
+.text-box {
+    width: 65%;
+    margin: auto;
+}
+
+.text-box h1 .text-space {
+    padding-left: 40px;
+}
+
+.text-box h1 span {
+    padding-left: 100px;
+}
+
+.box-width {
+    max-width: 930px;
+    margin: auto;
+    display: block;
+}
+
+.box-width p {
+    color: #5e6656;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.box-width h3 {
+    color: #5e6656;
+    font-size: 23px;
+    line-height: 32px;
+    margin-bottom: 10px;
+}
+
+.outer-box {
+    max-width: 1024px;
+    padding: 50px 100px;
+    margin: auto;
+    display: block;
+    background: #a1ac96;
+
+    @include max-w($screen-sm) {
+        margin-bottom: 50px;
+    }
+}
+
+.outer-box h1 {
+    color: #fff;
+    font-size: 52px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 50px;
+}
+
+.outer-box h1 span {
+    display: block;
+    padding-left: 100px;
+}
+
+.outer-box p {
+    color: #fff;
+    font-size: 14px;
+}
+
+.border-bottom {
+    border-bottom: 2px solid #484d43;
+    display: table;
+    margin: 50px auto;
+    width: 300px;
+}
+
+.outer-box h3 {
+    color: #484d43;
+    font-size: 37px;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 32px;
+}
+
+.form-div input {
+    font-family: "Archer Book",serif;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    font-size: 17px;
+    color: #484d43;
+    padding: 0 12px;
+}
+
+.form-div textarea::placeholder, .form-div input::placeholder {
+    color: #484d43;
+}
+
+.form-div textarea::placeholder, .form-div input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #484d43;
+}
+
+.form-div textarea::placeholder, .form-div input::-ms-input-placeholder { /* Microsoft Edge */
+    color: #484d43;
+}
+
+.form-div .form-group {
+    margin-bottom: 10px;
+}
+
+.form-div {
+    width: 650px;
+    margin: auto;
+    display: block;
+}
+
+.outer-box .udfy {
+    color: #484d43;
+    margin: 0 50px 30px;
+}
+
+.outer-box .venligst {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/*check box design css start*/
+.form-div .checkbox {
+    padding-left: 0px;
+    margin: 5px 0;
+    position: relative;
+}
+
+.form-div .checkbox label {
+    display: inline-block;
+    position: relative;
+    padding-left: 10px;
+    font-size: 13px;
+    font-family: "Archer Book",serif;
+}
+
+.form-div .checkbox label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    margin-left: -20px;
+    border-radius: 0px;
+    background-color: #fff;
+    -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.form-div .checkbox label::after {
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 2px;
+    top: 0px;
+    margin-left: -20px;
+    padding-left: 3px;
+    padding-top: 1px;
+    font-size: 11px;
+    color: #555555;
+}
+
+.form-div .checkbox input[type="checkbox"] {
+    opacity: 0;
+    height: auto;
+    position: absolute;
+    left: -17px;
+    top: 4px;
+}
+
+.form-div .checkbox input[type="checkbox"]:focus + label::before {
+    outline: none;
+}
+
+.form-div .checkbox input[type="checkbox"]:checked + label::after {
+    font-family: 'FontAwesome';
+    content: "\f00c";
+}
+
+.form-div .checkbox input[type="checkbox"]:disabled + label {
+    opacity: 0.65;
+}
+
+.form-div .checkbox input[type="checkbox"]:disabled + label::before {
+    background-color: #eeeeee;
+    cursor: not-allowed;
+}
+
+.form-div .checkbox-primary input[type="checkbox"]:checked + label::before {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.form-div .checkbox-primary input[type="checkbox"]:checked + label::after {
+    color: #484d43;
+    outline: none;
+}
+
+.form-div.text-form {
+    width: 340px;
+    display: table;
+}
+/*check box design css end*/
+
+.form-div textarea {
+    height: 200px;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    font-size: 19px;
+    color: #484d43;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-family: "Archer Book",serif;
+}
+
+.inline-list-style {
+    display: table;
+    margin: auto;
+    margin-left: 30px;
+}
+
+.inline-list-style li {
+    list-style: none;
+    display: inline-block;
+    width: 33%;
+}
+
+input.btn.btn--ecology-section {
+    color: #fff;
+    padding: 25px 33px;
+    background-color: #484d43;
+    font-size: 23px;
+    font-family: "News Gothic Condensed Bold",sans-serif;
+    font-weight: 400;
+    border: 2px solid transparent;
+    -webkit-transition: .5s;
+    transition: .5s;
+    padding: 25px 33px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    height: auto;
+}
+
+input.btn.btn--ecology-section:hover {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+}
+
+/* validation colors */
+
+form .input-validation-error {
+    border: solid 2px #484d43 !important;
+}
+
+form .field-validation-error span {
+    background-color: #484d43 !important;
+    color: #ffffff !important;
+    animation: blinker 1s cubic-bezier(.5, 0, 1, 1) infinite alternate;
+    padding: 2px 10px;
+}
+
+@keyframes blinker {
+    to {
+        opacity: 0.2;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .outer-box {
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .form-div.text-form {
+        width: 100%;
+        padding-left: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .form-div {
+        width: 100%;
+    }
+
+    .inline-list-style li {
+        width: 50%;
+    }
+
+    .form-div .checkbox label {
+        font-size: 10px;
+    }
+
+    .outer-box h1 span {
+        padding-left: 0px;
+    }
+}
+
+/* form end */
+
+
+/* login part */
+fieldset.loginbox {
+    padding: 10px 10px 20px 10px;
+}
+
+fieldset.loginbox button {
+    display: block !important;
+    width: 100% !important;
+    padding: 12px 33px !important;
+    font-size: 18px !important;
+    transform: none !important;
+    margin-top: 10px !important;
+}
+    
+.submitbtncontainer {
+    text-align: center;
+    display: block;
+}
+
+#submitbtn.disabled {
+    pointer-events: none;
+}
+
+.checkboxrow {
+    padding-left: 20px;
+}
+
+.form-introlabel {
+    padding: 30px 0 14px;
+    color: #fff;
+    text-align: center;
+    font-family: "Archer Book",serif;
+    font-size: 19px;
+}
+
+.outer-box h3.firsth3 {
+    margin-bottom: 0;
+}
+
+p.form-intro-text {
+    font-size: 14px;
+    line-height: 22px;
+    color: #484d43;
+    text-align: center;
+}
