@@ -1,3 +1,5 @@
+![](https://user-images.githubusercontent.com/43462128/79034943-43d31400-7bc2-11ea-9b76-db8d1fc124cd.gif)
+
 ## Что есть в стартовом проекте
 
 * Препроцессор SCSS
