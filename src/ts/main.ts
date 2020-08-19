@@ -1,1 +1,1 @@
-import './modules/geoMap/GeoMapPlacer';
+import './modules/geoMap/GeoMapPlacer'; 
